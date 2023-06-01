@@ -1,0 +1,48 @@
+.counter {     
+    display: flex;
+    height: 45px;   
+} 
+.counter input[type="button"],
+.counter input[type="text"] {
+    box-sizing: border-box; 
+    text-align: center;
+    height: 100%;
+    font-size: 18px;
+    width: 40px;    
+}
+
+#result {
+    width: 60px;    
+}
+
+
+/* 兌換按鈕 */
+.button-88 {
+  background-color:#4a94c9;
+  border-radius: 3px; 
+  color: white;
+  cursor: pointer;
+  display: inline-block; 
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  border: none;
+}
+.button-88:hover{
+  background-color: #003b64;
+  color: white;
+}
+
+
+

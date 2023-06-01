@@ -1,0 +1,52 @@
+.illustrate {   
+    text-align: center;
+}
+
+.illustrateContent {
+    align-items: center;
+}
+
+
+.illustrateRow {
+    align-items: center;
+} 
+
+/* 享受健身樂趣 橫幅 */
+.line{
+    position: absolute;
+    inset: 0;
+    background-color: white;   
+    overflow: hidden;
+    height: 450px;
+}
+.line::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1200px;
+    height: 200px;
+    transform: translate(-50%,50%);
+    background: linear-gradient(transparent,#ec9059,#ec9059,#ec9059,transparent);
+    animation: animation 5s linear infinite;
+    z-index: 0;
+}
+.box .line::after{
+    inset: 4px ;
+    background-color: white;
+    background:url(../../img/shop/1500px.png) no-repeat;
+    content: "";
+    position: absolute;
+}
+.box{
+    position: relative;
+    height: 360px;
+}
+@keyframes animation{
+    to {transform:translate(-50%,-50%)
+    rotate(360deg);}
+    from {transform:translate(-50%,-50%)
+        rotate(0deg);
+
+    }
+} 
