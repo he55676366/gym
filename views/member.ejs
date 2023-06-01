@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員專區</title>
+    <meta charset="UTF-8">
+    <!-- bootstrap -->
+    <!-- <script src="../js/bootstrap.js"></script> -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    </link>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    </link>
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- 個別css -->
+    <link rel="stylesheet" href="../css/memo.css">
+    </link>
+    <link rel="stylesheet" href="../css/navbar.css">
+    </link>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/jQuery-3.6.3.min.js"></script>
+    <style>
+        .temp {
+            color: white;
+        }
+
+        .hidden-center {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 新增 右下角寶箱 -->
+    <div class="box">
+        <div class="boxA">
+            <img id="boximg" src="../img/member/0001-chest_or.png" alt="567">
+        </div>
+        <div class="boxB">
+            <img src="../img/member/001-chest_or.png" alt="555">
+        </div>
+
+    </div>
+
+    <div id="renderenter" class="d-none"><%- JSON.stringify(enterHistory) %></div>
+    <!-- navbar -->
+    <div id="appendnav"></div>
+
+    <!-- 首圖 -->
+    <!-- <div class=" p-5 col-md-12" style="height: 300px; background-image:url('../img/member/setting_1.jpg'),url('../img/member/setting_2.jpg'),url('../img/member/setting_3.jpg'),url('../img/member/setting_4.jpg'),url('../img/member/setting_5.jpg'),url('../img/member/setting_6.jpg'); 
+background-repeat: no-repeat;
+background-position: left top, right bottom, center center,400px center,1050px center,800px center;
+background-size:contain;
+border-radius: 0 300px 0 0">
+    </div> -->
+    <!-- body -->
+    <div class="container d-flex">
+        <!-- 左邊欄 -->
+        <div class="col-md-3   mt-5">
+            <div class="d-flex justify-content-center m-3">
+                <img src=<%=person[0].avatar %> id="userphoto" alt="userphoto">
+            </div>
+            <div class="text-center m-4">
+                <h4 class="temp">歡迎回來</h4>
+                <h3 id="username" class="temp">
+                    <%= person[0].mname %>
+                </h3> <!-- 後端資料 -->
+            </div>
+
+            <div class="p-3">
+                <div class="text-center aside">
+                    <span class="title_highlight">上次造訪</span><br>
+                    <span class="temp">
+                    </span>
+                </div>
+                <div class="text-center m-4">
+                    <span class="title_highlight">本月造訪時數</span><br>
+                    <span class="temp">
+                        <%= person[0].total_times %>hr
+                    </span>
+                </div>
+                <div class="text-center">
+                    <span class="title_highlight">積分</span><br>
+                    <span class="temp personPoint">
+                        <%= person[0].point %>點
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="text-center m-4">
+                <a href="#" class="p-3" style="border-radius:5px; color:white;background-color: #EC9059;">立即預約</a>
+            </div>
+
+
+        </div>
+        <!-- 中間資訊欄 -->
+        <div id="content" class="col-md-9 mt-5">
+            <div id="conter_nav">
+                <!-- 上排選單-->
+                <div class="nav nav-fill nav-pills flex-column flex-md-row">
+                    <div class="justify-content-center m-3">
+                        <a data-bs-toggle="pill" href="#memberhome" class="active"><span
+                                class="filter p-2">個人資料</span></a>
+                        <a data-bs-toggle="pill" href="#enter"><span class="filter p-2">造訪歷史紀錄</span></a>
+                        <a data-bs-toggle="pill" href="#reserve"><span class="filter p-2">預約歷史紀錄</span></a>
+                        <a data-bs-toggle="pill" href="#exchange"><span class="filter p-2">兌換紀錄</span></a>
+                    </div>
+                </div>
+
+                <!-- 中間資訊-->
+                <div class="tab-content p-4 bg-white middle" style="border-radius: 20px;">
+                    <!-- 個人資料 -->
+                    <div id="memberhome" class="tab-pane mt-2 active">
+                        <h3 class="h3color"><span class="material-symbols-outlined">sprint</span>個人資料</h3>
+                        <div class="d-flex mt-3">
+                            <div class="bg-light p-2">
+                                <p>姓名：</p>
+                                <p>生日：</p>
+                                <p>手機：</p>
+                                <p>電子信箱：</p>
+                                <p>居住地址：</p>
+                            </div>
+                            <div class="p-2">
+                                <p>
+                                    <%= person[0].mname %>
+                                </p>
+                                <p>
+                                    <%= person[0].mbirth %>
+                                </p>
+                                <p>
+                                    <%= person[0].mphone %>
+                                </p>
+                                <p>
+                                    <%= person[0].memail %>
+                                </p>
+                                <p>
+                                    <%= person[0].maddress %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start mt-3 p-4">
+                            <button id="modifyinformation" class="p-4 user_link" onclick="dia('id01')">修改個人資訊</button>
+                            <button id="modifypassword" class="p-4 user_link" onclick="dia('id02')">修改密碼</button>
+                        </div>
+                    </div>
+                    <!-- 造訪歷史紀錄 -->
+                    <div id="enter" class="tab-pane mt-2">
+                        <h3 class="h3color"><span class="material-symbols-outlined">hiking</span>造訪歷史紀錄</h3>
+                        <div class="mt-3">
+                            <div>
+                                <table class="mt-3">
+                                    <tr class="bg-light">
+                                        <td class="thhhh">日期</td>
+                                        <td class="thhhh">場館</td>
+                                        <td class="thhhh">入場時間</td>
+                                        <td class="thhhh">離場時間</td>
+                                    </tr>
+                                    <% enterHistory.forEach((v ,index)=> { %>
+                                        <tr>
+                                            <td class="tdddd">
+                                                <%= v.enterdate %>
+                                            </td>
+                                            <td class="tdddd">
+                                                <%= v.building %>
+                                            </td>
+                                            <td class="tdddd">
+                                                <%= v.entertime %>
+                                            </td>
+                                            <td class="tdddd">
+                                                <%= v.exittime %>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 預約歷史紀錄-->
+                    <div id="reserve" class="tab-pane mt-2">
+                        <!-- 私人教練 -->
+                        <h3 class="h3color"><span class="material-symbols-outlined">sports_gymnastics</span>私人教練</h3>
+                        <div class="mt-3">
+                            <div>
+                                <table>
+                                    <tr class="bg-light">
+                                        <td class="thhhh d-none">id</td>
+                                        <td class="thhhh">日期</td>
+                                        <td class="thhhh">時間</td>
+                                        <td class="thhhh">場館</td>
+                                        <td class="thhhh">教練</td>
+                                        <td class="thhhh">狀態</td>
+                                        <td class="thhhh"></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 團體課程 -->
+                        <h3 class="h3color mt-3"><span class="material-symbols-outlined">rowing</span>團體課程</h3>
+                        <div class="mt-3">
+                            <div>
+                                <table>
+                                    <tr class="bg-light">
+                                        <td class="thhhh d-none">id</td>
+                                        <td class="thhhh">日期</td>
+                                        <td class="thhhh">時間</td>
+                                        <td class="thhhh">場館</td>
+                                        <td class="thhhh">課程</td>
+                                        <td class="thhhh">狀態</td>
+                                        <td class="thhhh"></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 空間 -->
+                        <h3 class="h3color mt-3"><span class="material-symbols-outlined">kitesurfing</span>空間預約</h3>
+                        <div class="mt-3">
+                            <div>
+                                <table>
+                                    <tr class="bg-light">
+                                        <td class="thhhh d-none">id</td>
+                                        <td class="thhhh">日期</td>
+                                        <td class="thhhh">時間</td>
+                                        <td class="thhhh">場館</td>
+                                        <td class="thhhh">空間</td>
+                                        <td class="thhhh">狀態</td>
+                                        <td class="thhhh"></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 兌換紀錄 -->
+                    <div id="exchange" class="tab-pane mt-2">
+                        <h3 class="h3color"><span class="material-symbols-outlined">snowboarding</span>兌換紀錄</h3>
+                        <div class="mt-3">
+                            <table>
+                                <tr style="border-bottom: solid 2px gray;" class="bg-light">
+                                    <td>兌換日期</td>
+                                    <td>兌換編號</td>
+                                    <td>商品名稱</td>
+                                    <td>商品數量</td>
+                                    <td>商品積分</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 彈跳視窗 -->
+
+    <!-- 修改個人資料 -->
+    <div id="id01" class="modal">
+        <div class="d-flex hidden-center mt-2">
+            <form class="animate">
+                <div class="imgcontainer">
+                    <img src=<%=person[0].avatar %> alt="Avatar" class="avatar">
+                </div>
+                <div class="up_window text-center">
+                    <h4>修改個人資訊</h4>
+                    <div>
+                        <label class="modify_label" for="phone">手機&nbsp;&nbsp;<input class="modify_input mt-3 p-3"
+                                name="phone" type="tel" placeholder="0900-112233"></label><br>
+                        <label class="modify_label" for="phone">信箱&nbsp;&nbsp;<input class="modify_input mt-3 p-3"
+                                name="email" type="email" placeholder="AAA@BBB.COM"></label><br>
+                        <label class="modify_label" for="phone">地址&nbsp;&nbsp;<input class="modify_input mt-3 p-3"
+                                name="address" type="text" placeholder="台中市南屯區黎明路二段555號"></label>
+                    </div>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="cancelbtn">關閉</button>
+                    <button class="okbtn subinfo" type="button">確認修改</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 修改密碼 -->
+    <div id="id02" class="modal">
+        <div class="d-flex hidden-center mt-2">
+            <form id="changepassword" class="animate">
+                <div class="imgcontainer">
+                    <img src=<%=person[0].avatar %> alt="Avatar" class="avatar">
+                </div>
+                <div class="up_window text-center">
+                    <h4>修改密碼</h4>
+                    <label class="modify_label" for="oldpassword">原密碼　　　</label>
+                    <input class="modify_input mt-3 p-3" id="oldpassword" type="password" name="old">
+                    <br>
+                    <label class="modify_label" for="newpassword">新密碼　　　</label>
+                    <input class="modify_input mt-3 p-3" id="newpassword" type="password">
+                    <br>
+                    <label class="modify_label" for="confirmpassword">確認新密碼　</label>
+                    <input class="modify_input mt-3 p-3" id="confirmpassword" type="password" name="new">
+                </div><br>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="cancelbtn">關閉</button>
+                    <button type="submit" class="okbtn" onclick="id02ok()">確認修改</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 取消課程/教練/空間 -->
+    <div id="id03" class="modal">
+        <div class="d-flex hidden-center mt-2">
+            <form id="" class="animate">
+                <div class="up_window text-center" style="width: 450px;">
+                    <h4>確定取消嗎？</h4>
+                    <div class="d-flex mt-3 justify-content-center">
+                        <div class="bg-light p-3 idtitle">
+                            <p class="d-none"></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div class="p-3 idcontent">
+                            <p class="d-none"></p>
+                            <input type="hidden" name="id">
+                            <input type="hidden" name="way">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="cancelbtn">關閉</button>
+                    <button type="button" class="okbtn subres">確認取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 傳送成功 -->
+    <div id="id04" class="modal">
+        <div class="d-flex hidden-center mt-2">
+            <div>
+                <div class="imgcontainer">
+                    <img src=<%=person[0].avatar %> alt="Avatar" class="avatar">
+                </div>
+                <div class="up_window text-center">
+                    <p>修改成功</p>
+                    <div class=" justify-content-center">
+                        <button type="button" class="okbtn"
+                            onclick="document.getElementById('id04').style.display='none'" id="id04_ok">確認</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 獲得積分 -->
+    <div id="id05" class="modal">
+        <div class="d-flex hidden-center mt-2">
+            <form class="animate">
+                <div class="up_window text-center">
+                    <p>每日簽到+100點積分</p>
+                    <div class=" justify-content-center">
+                        <button type="submit" class="okbtn"
+                            onclick="document.getElementById('id05').style.display='none'" id="id05_ok">確認</button>
+                    </div>
+                </div>
+            </form>>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="b-example-divider"></div>
+    <footer></footer>
+    <script>
+        var token = "<%= token%>"
+        var user_name =<%- JSON.stringify(person) %>;
+    </script>
+    <script src="../js/appendnav.js"></script>
+    <script src="../js/appendfooter.js"></script>
+    <script>
+        var enter = JSON.parse(renderenter.innerHTML);
+        if (enter.length > 0) {
+            console.log(enter[0])
+            $('.aside span').eq(1).append(`${enter[0].enterdate}${enter[0].building}`);
+        } else {
+            $('.aside span').eq(1).append(`未有進出紀錄`);
+        }
+        var hidden_center = $('.hidden-center');
+
+        var reserveP = $(`<%  var p2 = personalClass.reverse()
+                p2.forEach((v ,index)=> { %>
+                <tr>
+                    <td class="tdddd d-none"><%= v.personal_csid %></td>
+                    <td class="tdddd"><%= v.sdate %></td>
+                    <td class="tdddd"><%= v.stime %>-<%= v.etime %></td>
+                    <td class="tdddd"><%= v.building %></td>
+                    <td class="tdddd"><%= v.cname %></td>
+                    <td class="tdddd state"><%= v.state %></td>
+                    <td class="tdddd">
+                        <span class="d-none">person</span>
+                        <button class="user_link cancel_res" id="detailed_information_up">取消</button>
+                    </td>
+                </tr>
+            <% }) %>`);
+        var reserveT = $(`<%  var t2 = teamClass.reverse()
+                t2.forEach((v ,index)=> { %>
+                <tr>
+                    <td class="tdddd d-none"><%= v.team_resid %></td>
+                    <td class="tdddd"><%= v.sdate %></td>
+                    <td class="tdddd"><%= v.stime %>-<%= v.etime %></td>
+                    <td class="tdddd"><%= v.building %></td>
+                    <td class="tdddd"><%= v.csname %></td>
+                    <td class="tdddd state"><%= v.state %></td>
+                    <td class="tdddd">
+                        <span class="d-none">team</span>
+                        <button class="user_link cancel_res" id="detailed_information_up">取消</button>
+                    </td>
+                </tr>
+            <% }) %>`
+        )
+        var reserveS = $(`<%  var space2 = space.reverse()
+                space2.forEach((v ,index)=> { %>
+                <tr>
+                    <td class="tdddd d-none"><%= v.space_resid %></td>
+                    <td class="tdddd"><%= v.sdate %></td>
+                    <td class="tdddd"><%= v.stime %>-<%= v.etime %></td>
+                    <td class="tdddd"><%= v.building %></td>
+                    <td class="tdddd"><%= v.space_name %></td>
+                    <td class="tdddd state"><%= v.state %></td>
+                    <td class="tdddd">
+                        <span class="d-none">space</span>
+                        <button class="user_link cancel_res" id="space_details_up">取消</button>
+                    </td>
+                </tr>
+            <% }) %>`
+        )
+        var purList = $(`<% var purchase2 = purchase.reverse()
+        purchase2.forEach((v ,index)=> { %>
+            <tr>
+                <td><%= v.pdate %></td>
+                <td><%= v.purchase_id %></td>
+                <td><%= v.purchase_item %></td>
+                <td><%= v.purchase_quantity %></td>
+                <td><%= v.totalprice %></td>
+            </tr>
+            <% }) %>
+        `)
+
+        var resMain = $('#reserve tr.bg-light');
+        var purMain = $('#exchange tr.bg-light');
+        resMain.eq(0).after(reserveP);
+        resMain.eq(1).after(reserveT);
+        resMain.eq(2).after(reserveS);
+        purMain.eq(0).after(purList);
+
+        resMain.eq(0).nextAll().eq(4).nextAll().remove();
+        resMain.eq(1).nextAll().eq(4).nextAll().remove();
+        resMain.eq(2).nextAll().eq(4).nextAll().remove();
+        purMain.nextAll().eq(9).nextAll().remove();
+        purMain.nextAll().each(function () {
+            var ver = $(this).find('td').eq(1);
+            var ver2 = ver.text().padStart(7, "P000000");
+            ver.replaceWith(`<td>${ver2}</td>`);
+        });
+
+        var url = location.href;
+        var url_class = url.split('#');
+        var url_active = $('.nav a');
+
+        if (!!url_class[1]) {
+            switch (url_class[1]) {
+                case "mEnter":
+                    url_active[1].click();
+                    break;
+                case "mReserve":
+                    url_active[2].click();
+                    break;
+                case "mExchange":
+                    url_active[3].click();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        var cancel_res = $(".cancel_res");
+
+        // 更新資料
+
+        $('.subinfo').click(function () {
+            var data = $(`#id01 form`).serializeArray();
+            JSONData = serializeToJSON(data);
+            console.log(JSONData);
+            $.ajax({
+                url: `/member/info`,
+                type: "PUT",
+                contentType: "application/json; charset=utf-8",
+                data: JSONData,
+                success: function (res) {
+                    var res = JSON.parse(res)
+                    console.log(res);
+                    if (res.errno === 1) {
+                        id01.style.display = 'none'
+                        id04.style.display = 'block';
+                        window_resize()
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 2000);
+                    } else if (res.errno === 0) {
+                        alert("更新失敗!")
+                    }
+                },
+                error: function () {
+                    alert("更新系統錯誤!")
+                }
+            })
+        }
+        )
+
+        // 更新預約
+
+        $('.subres').click(function () {
+            var target = $(this);
+            var data = $(`#id03 form`).serializeArray();
+            JSONData = serializeToJSON(data);
+            console.log(JSONData);
+            $.ajax({
+                url: `/member/class`,
+                type: "PUT",
+                contentType: "application/json; charset=utf-8",
+                data: JSONData,
+                success: function (res) {
+                    var res = JSON.parse(res)
+                    console.log(res);
+                    if (res.errno === 1) {
+                        var dnone = target.parents('form').find('input').eq(1).val();
+                        var dnoneid = target.parents('form').find('input').eq(0).val();
+                        console.log(dnone);
+                        switch (dnone) {
+                            case "person":
+                                var d = resMain.eq(0).nextAll();
+                                $.each(d.find('td.d-none'), (i, v) => {
+                                    if ($(v).text() == dnoneid) {
+                                        d.find('.state').eq(i).text("取消");
+                                        d.find('.state').next().eq(i).css('display', 'none');
+                                    }
+                                })
+                                id03.style.display = 'none';
+                                id04.style.display = 'block';
+                                window_resize()
+                                setTimeout("ccolse()", 2000);
+                                break;
+                            case "team":
+                                var d = resMain.eq(1).nextAll();
+                                console.log(d);
+                                $.each(d.find('td.d-none'), (i, v) => {
+                                    if ($(v).text() == dnoneid) {
+                                        d.find('.state').eq(i).text("取消");
+                                        d.find('.state').next().eq(i).css('display', 'none');
+                                    }
+                                })
+                                id03.style.display = 'none';
+                                id04.style.display = 'block';
+                                window_resize()
+                                setTimeout("ccolse()", 2000);
+                                break;
+                            case "space":
+                                var d = resMain.eq(2).nextAll();
+                                $.each(d.find('td.d-none'), (i, v) => {
+                                    if ($(v).text() == dnoneid) {
+                                        d.find('.state').eq(i).text("取消");
+                                        d.find('.state').next().eq(i).css('display', 'none');
+                                    }
+                                })
+                                id03.style.display = 'none';
+                                id04.style.display = 'block';
+                                window_resize()
+                                setTimeout("ccolse()", 2000);
+                                break;
+                            default:
+                                id03.style.display = 'none';
+                                break;
+                        }
+                    } else if (res.errno === 0) {
+                        console.log("bad");
+                        alert("更新失敗!")
+                    }
+                },
+                error: function () {
+                    console.log('error');
+                    alert("更新系統錯誤!")
+                }
+            })
+        }
+        )
+
+
+        function ccolse() {
+            id04.style.display = 'none';
+        }
+
+
+        cancel_res.click(function () {
+            id03.style.display = 'block';
+            window_resize();
+            var way = $(this);
+            var x = way.parents('table').find('.thhhh');
+            var y = way.parent().siblings();
+            console.log(y);
+            $.each(x, (i, v) => {
+                var zz = $(v).text()
+                $('#id03 .idtitle p').eq(i).text(zz);
+            })
+            $.each(y, (i, v) => {
+                var zz = $(v).text()
+                $('#id03 .idcontent p').eq(i).text(zz);
+            })
+            var input03 = $('#id03 input')
+            var keyid = input03.eq(0).prev().text()
+            input03.eq(0).val(keyid);
+            var keyway = $(this).prev().text();
+            input03.eq(1).val(keyway);
+            console.log(input03.eq(0).prev());
+        })
+
+        $('.cancelbtn').click(function () {
+            var closemodal = $(this).parents(".modal");
+            closemodal.css("display", "none");
+        })
+
+        function dia(x) {
+            $(`#${x}`).css("display", "block");
+            window_resize()
+        }
+
+
+        //序列化轉JSON
+        function serializeToJSON(toArray) {
+            var vtoString = {};
+            for (index in toArray) {
+                vtoString[toArray[index].name] = toArray[index].value;
+            }
+            return JSON.stringify(vtoString)
+        }
+
+        $(document).ready(function () {
+            var x = cancel_res.parent().prev()
+            $.each(x, (i, v) => {
+                var zz = $(v).text()
+                if (zz !== "預約成功") {
+                    cancel_res.eq(i).css('display', 'none');
+                }
+            })
+        });
+
+        //密碼驗證
+
+        let oldpassword = document.getElementById('oldpassword');
+        let newpassword = document.getElementById('newpassword');
+        let confirmpassword = document.getElementById('confirmpassword');
+
+        function id02ok() {
+            // 驗證沒問題,關閉送出
+            if (oldpassword.value != newpassword.value && newpassword.value == confirmpassword.value && oldpassword.value != "" && newpassword.value != "" && confirmpassword.value != "") {
+                oldpassword.style.border = "black 1px solid";
+                newpassword.style.border = "black 1px solid";
+                confirmpassword.style.border = "black 1px solid";
+                var data = $(`#id02 form`).serializeArray();
+                SONData = serializeToJSON(data);
+                console.log(JSONData);
+                $.ajax({
+                    url: `/member/password`,
+                    type: "PUT",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSONData,
+                    success: function (res) {
+                        var res = JSON.parse(res)
+                        console.log(res);
+                        if (res.errno === 1) {
+                            location.reload()
+                        } else if (res.errno === 0) {
+                            alert("更新密碼失敗!")
+                        }
+                    },
+                    error: function () {
+                        alert("更新密碼錯誤!")
+                    }
+                })
+                id02.style.display = 'none';
+
+            } else {
+                //判斷是否為空,有空跳紅框+提示,沒空轉黑框
+                if (oldpassword.value == "") {
+                    oldpassword.style.border = "red 1px solid";
+                    oldpassword.placeholder = "請輸入舊密碼"
+                }
+                if (newpassword.value == "") {
+                    newpassword.style.border = "red 1px solid";
+                    newpassword.placeholder = "請輸入新密碼"
+                }
+                if (confirmpassword.value == "") {
+                    confirmpassword.style.border = "red 1px solid";
+                    confirmpassword.placeholder = "請輸入確認新密碼"
+                }
+                if (oldpassword.value != "") {
+                    oldpassword.style.border = "black 1px solid";
+                }
+                if (newpassword.value != "") {
+                    newpassword.style.border = "black 1px solid";
+                }
+                if (confirmpassword.value != "") {
+                    confirmpassword.style.border = "black 1px solid";
+                }
+                //驗證新舊密碼
+                if (oldpassword.value == newpassword.value && oldpassword.value != "" && newpassword.value != "") {
+                    oldpassword.style.border = "red 1px solid";
+                    newpassword.style.border = "red 1px solid";
+                    oldpassword.value = "";
+                    newpassword.value = "";
+                    oldpassword.placeholder = "舊密碼跟新密碼不能相同"
+                    newpassword.placeholder = "舊密碼跟新密碼不能相同"
+                }
+                //驗證新密碼跟確認新密碼
+                if (newpassword.value != confirmpassword.value && newpassword.value != "" && confirmpassword.value != "") {
+                    newpassword.style.border = "red 1px solid";
+                    confirmpassword.style.border = "red 1px solid";
+                    newpassword.value = "";
+                    confirmpassword.value = "";
+                    newpassword.placeholder = "新密碼跟確認新密碼需要相同";
+                    confirmpassword.placeholder = "新密碼跟確認新密碼需要相同";
+                }
+                event.preventDefault();
+            }
+        }
+
+        function window_resize() {
+            hidden_center.each((i, v) => {
+                hidden_center.eq(i).css({ 'top': '50%', 'left': '50%' });
+                console.log(hidden_center.eq(i));
+                console.log(hidden_center.eq(i).offset());
+                var h = hidden_center.eq(i).height();
+                var w = hidden_center.eq(i).width();
+                var o = hidden_center.eq(i).offset();
+                hidden_center.eq(i).offset({
+                    top: `${o.top - h / 2}`,
+                    left: `${o.left - w / 2}`,
+                })
+            })
+        }
+
+        $(window).on("resize", function () {
+            window_resize();
+        });
+
+
+    </script>
+
+    <script>
+        var memberRights = <%- JSON.stringify(person[0].rights) %>;
+        var personPoint = $('.personPoint').text();
+        console.log(personPoint);
+
+        if (memberRights === 1) {
+            console.log("這個1"+memberRights);
+            $('.boxA').show();
+            $('.boxB').hide();
+        } else if (memberRights === 0) {
+            $('.box').css('display', 'none');
+        }
+
+        // if (memberRights === 1) {
+        //     $('.boxA').show();
+        //     $('.boxB').hide();
+        // } else if (memberRights === 0) {
+        //     $('.boxA').hide();
+        //     $('.boxB').show();
+        // }
+
+        $('.box').on('click', function () {
+            $.ajax({
+                type: "get",
+                url: "http://localhost:5000/getMemberPoint",
+                success: function (data, status) {
+                    if (status === "success") {
+                        console.log('成功更新數據');
+                        personPoint = parseInt(personPoint) + 100;
+                        $('.personPoint').text(personPoint);
+
+                        // memberRights = 0;
+                        if (memberRights === 1) {
+                            $('#id05').css('display', 'block');
+                            window_resize()
+                            memberRights = 0;
+                            $('.boxA').hide();
+                            $('.boxB').show();
+                        } else if (memberRights === 0) {
+                            $('#id05').css('display', 'block');
+                            window_resize()
+                            memberRights = 1;
+                            $('.boxA').show();
+                            $('.boxB').hide();
+                        }
+                        console.log(memberRights);
+
+                        setTimeout(function () {
+                            $('#id05').css('display', 'none');
+                            $('.box').css('display', 'none');
+                        }, 1500);
+
+                        // 發送 memberRights 到服務器
+                        $.ajax({
+                            type: "post",
+                            url: "http://localhost:5000/updateMemberRights",
+                            data: { memberRights: memberRights },
+                            success: function (data, status) {
+                                console.log('成功更新 memberRights');
+                            },
+                            error: function (xhr, status, error) {
+                                console.log('更新 memberRights 失败:', error);
+                            }
+                        });
+
+                    } else {
+                        console.log('更新數據失敗');
+
+                    }
+                }
+            })
+        })
+    </script>
+
+    <script>
+        $('#id05 .okbtn').on('click', function () {
+            // alert('ok');
+            $('.box').css('display', 'none');
+        })
+    </script>
+
+
+</body>
+
+</html>

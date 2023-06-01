@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登入</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <script src="../js/jQuery-3.6.3.min.js"></script>
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+      /* align-items: center; */
+      background-color: #003B64;
+      font-family: "Taipei Sans";
+    }
+
+    .form-signin {
+        width: 450px;
+        align-items: center;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px; 
+        margin-top: 40px;
+        box-shadow: rgba(0, 0, 0, 0.15) 8.95px 8.95px 5.6px;
+        border-radius: 8px;
+
+      }
+
+    .form-signin .form-floating:focus-within {
+      z-index: 2;
+    }
+
+    .form-signin input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .modify_input {
+      width: 250px;
+      height: 30px;
+    }
+
+    .up_window {
+      padding: 20px;
+      border: 5px solid #EC9059;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .up_dialog {
+      margin: 0px 10px;
+    }
+
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      position: relative;
+    }
+
+    img.avatar {
+      /* width: 40%; */
+      /* border-radius: 50%; */
+      height: 200px;
+    }
+
+    .modal {
+      display: none;
+      z-index: 9999;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      align-items: center;
+      align-self: center;
+      align-content: center;
+      text-align: center;
+      background-color: #fefefe;
+      border: none;
+      width: 60%;
+      height: 100%;
+    }
+
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes animatezoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    .okbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 8px 8px;
+      margin: 8px 8px;
+      border: none;
+      cursor: pointer;
+      width: auto;
+    }
+
+    span:hover {
+      --bs-link-color-rgb: var(--bs-link-hover-color-rgb)
+    }
+
+
+    .hidden-center {
+      position: absolute;
+    }
+
+    .btn {
+      background-color: #EC9059;
+    }
+  </style>
+
+
+
+</head>
+
+<body class="text-center d-flex justify-content-center">
+
+  <main class="form-signin bg-white">
+    <form method="POST" id="reg">
+      <a href="/index"><img src="../img/logo/Vitality Gym Logo2_工作區域 1.png" alt="" width="150"></a>
+      <h1 class="h3 m-3 fw-normal">會員登入</h1>
+
+      <div class="form-floating">
+        <input type="text" class="form-control" id="account" placeholder="name@example.com" name="account">
+        <label for="floatingInput">帳號</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="Password" placeholder="Password" name="password">
+        <label for="floatingPassword">密碼</label>
+      </div>
+      <div class="checkbox mb-3">
+        <button class="btn btn-md" type="button" id="fine">登入</button>
+      </div>
+      <a href="./register">註冊會員</a>
+      <a href="#">忘記密碼</a>
+
+      <p class="mt-5 mb-3">&copy; 2017–2023</p>
+    </form>
+  </main>
+  <!-- <button onclick="id04.style.display = 'block'">123</button> -->
+
+  <!-- 登入成功 -->
+  <div id="id04" class="modal">
+    <div class="d-flex hidden-center mt-2">
+      <div class="animate">
+        <div class="up_window text-center">
+          <div class="imgcontainer">
+            <img src="../img/logo/Vitality Gym Logo_3.png" alt="Avatar" class="avatar">
+          </div>
+          <p>登入成功</p>
+          <div class=" justify-content-center">
+            <button type="submit" class="okbtn" onclick="document.getElementById('id04').style.display='none'"
+              id="id04_ok">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    $('#fine').click(function () {
+      var toArray = $('#reg').serializeArray();
+      jsonArray = serializeToJSON(toArray);
+      $.ajax({
+        url: "/login",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        data: jsonArray,
+        success: function (res) {
+          var res = JSON.parse(res);
+          if (res.errno === 1) {
+            id04.style.display = "block";
+            window_resize();
+            setTimeout(function () {
+              location.href = '/member';
+            }, 1000);
+          } else if (res.errno === 0) {
+            alert('註冊失敗');
+          }
+        },
+        error: function () {
+          alert('註冊錯誤');
+        }
+      })
+    })
+
+    var hidden_center = $('.hidden-center');
+
+    function window_resize() {
+      var lol = $('.imgcontainer')
+      console.log(lol.height());
+      console.log(lol.width())
+      hidden_center.each((i, v) => {
+        hidden_center.eq(i).css({ 'top': '50%', 'left': '50%' });
+        console.log(hidden_center.eq(i));
+        console.log(hidden_center.eq(i).offset());
+        var h = hidden_center.eq(i).height();
+        var w = hidden_center.eq(i).width();
+        var o = hidden_center.eq(i).offset();
+        hidden_center.eq(i).offset({
+          top: `${o.top - h / 2}`,
+          left: `${o.left - w / 2}`,
+        })
+      })
+    }
+
+    $(window).on("resize", function () {
+      window_resize();
+    });
+
+
+    //序列化轉JSON
+    function serializeToJSON(toArray) {
+      var vtoString = {};
+      for (index in toArray) {
+        vtoString[toArray[index].name] = toArray[index].value;
+        console.log(vtoString[toArray[index].name]);
+      }
+      return JSON.stringify(vtoString)
+    }
+
+    var fakeput = $('input');
+        fakeput.eq(0).click(()=>{
+            fakeput.eq(0).val('catcat15')
+          ;})
+        fakeput.eq(1).click(()=>{fakeput.eq(1).val('123456');})
+
+
+  </script>
+
+
+
+</body>
+
+</html>

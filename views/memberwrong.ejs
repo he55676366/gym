@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員專區</title>
+    <meta charset="UTF-8">
+    <!-- bootstrap -->
+    <!-- <script src="../js/bootstrap.js"></script> -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    </link>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    </link>
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- 個別css -->
+    <link rel="stylesheet" href="../css/memo.css">
+    </link>
+    <link rel="stylesheet" href="../css/navbar.css">
+    </link>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/jQuery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <div id="renderenter" class="d-none"><%- JSON.stringify(enterHistory) %></div>
+    <!-- navbar -->
+    <div id="appendnav"></div>
+
+    <!-- 首圖 -->
+    <div class="bg-info p-5 col-md-12" style="border-radius: 0 130px 0 0;">
+        <h1>Navbar example</h1>
+        <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it
+            will remain fixed to the top of your browser’s viewport.</p>
+        <a class="btn btn-lg btn-light" href="#" role="button">View navbar docs &raquo;</a>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </div>
+
+    <!-- body -->
+    <div class="container d-flex">
+        <!-- 左邊欄 -->
+        <div class="col-md-3 mt-5 aside">
+            <div class="d-flex justify-content-center m-3">
+                <img src=<%=person[0].avatar %> id="userphoto" alt="userphoto">
+            </div>
+            <div class="text-center m-4">
+                <h4>歡迎回來</h4>
+                <h3 id="username">
+                    <%= person[0].mname %>
+                </h3> <!-- 後端資料 -->
+            </div>
+
+            <div class="p-3">
+                <div class="text-center">
+                    <span class="title_highlight">上次造訪</span><br>
+                    <span></span>
+                </div>
+                <div class="text-center m-4">
+                    <span class="title_highlight">本月造訪時數</span><br>
+                    <span>
+                        <%= person[0].total_times %>
+                    </span>
+                    <span>hr</span>
+                </div>
+                <div class="text-center">
+                    <span class="title_highlight">積分</span><br>
+                    <span>
+                        <%= person[0].point %>
+                    </span>
+                    <span>點</span>
+                </div>
+
+            </div>
+
+            <div class="text-center m-4">
+                <a href="#" class="p-3" style="border-radius:5px; color:white;background-color: #EC9059;">立即預約</a>
+            </div>
+
+        </div>
+        <!-- 中間資訊欄 -->
+        <div id="content" class="col-md-9 mt-5">
+            <div id="conter_nav">
+                <!-- 上排選單-->
+                <div class="nav nav-fill nav-pills flex-column flex-md-row">
+                    <div class="justify-content-center m-3">
+                        <a data-bs-toggle="pill" href="#memberhome" class="active"><span
+                                class="filter p-2">個人資料</span></a>
+                        <a data-bs-toggle="pill" href="#entryexittimerecords"><span class="filter p-2">造訪歷史紀錄</span></a>
+                        <!-- <a data-bs-toggle="pill" href="#recent_appointment"><span class="filter p-2">預約紀錄</span></a> -->
+                        <a data-bs-toggle="pill" href="#appointmentrecordinquiry"><span
+                                class="filter p-2">預約歷史紀錄</span></a>
+                        <a data-bs-toggle="pill" href="#exchangerecord"><span class="filter p-2">兌換紀錄</span></a>
+                    </div>
+                </div>
+
+                <!-- 中間資訊-->
+                <div class="tab-content p-4 bg-white" style="border-radius: 20px;">
+                    <!-- 個人資料 -->
+                    <div id="memberhome" class="tab-pane mt-2 active">
+                        <h3 class="h3color"><span class="material-symbols-outlined">sprint</span>個人資料</h3>
+                        <div class="d-flex mt-3">
+                            <div class="bg-light p-2">
+                                <p>姓名：</p>
+                                <p>生日：</p>
+                                <p>手機：</p>
+                                <p>電子信箱：</p>
+                                <p>居住地址：</p>
+                            </div>
+                            <div class="p-2">
+                                <p><%= person[0].mname %></p>
+                                <p><%= person[0].mbirth %> </p>
+                                <p><%= person[0].mphone %></p>
+                                <p><%= person[0].memail %></p>
+                                <p><%= person[0].maddress %></p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start mt-3 p-4">
+                            <a href="" id="modifyinformation" class="p-4 user_link"
+                                onclick="document.getElementById('id01').style.display='block'">修改個人資訊</a>
+                            <a href="" id="modifypassword" class="p-4 user_link"
+                                onclick="document.getElementById('id02').style.display='block'">修改密碼</a>
+                        </div>
+                    </div>
+                    <!-- 造訪歷史紀錄 -->
+                    <div id="entryexittimerecords" class="tab-pane mt-2">
+                        <h3 class="h3color"><span class="material-symbols-outlined">hiking</span>造訪歷史紀錄</h3>
+                        <div class="mt-3">
+                            <div>
+                                <table class="mt-3">
+                                    <tr class="bg-light">
+                                        <td class="thhhh">日期</td>
+                                        <td class="thhhh">場館</td>
+                                        <td class="thhhh">入場時間</td>
+                                        <td class="thhhh">離場時間</td>
+                                    </tr><% enterHistory.forEach((v ,index)=> { %><tr>
+                                            <td class="tdddd"><%= v.enterdate %></td>
+                                            <td class="tdddd"><%= v.building %></td>
+                                            <td class="tdddd"><%= v.entertime %></td>
+                                            <td class="tdddd"><%= v.exittime %></td>
+                                        </tr>
+                                        <% }) %>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 預約歷史紀錄-->
+                    <div id="appointmentrecordinquiry" class="tab-pane mt-2">
+                        <!-- 私人教練 -->
+                        <h3 class="h3color"><span class="material-symbols-outlined">sports_gymnastics</span>私人教練</h3>
+                        <div class="mt-3">
+                            <div>
+                                <table>
+                                    <tr class="bg-light">
+                                        <td class="thhhh">日期</td>
+                                        <td class="thhhh">時間</td>
+                                        <td class="thhhh">場館</td>
+                                        <td class="thhhh">教練</td>
+                                        <td class="thhhh">狀態</td>
+                                        <td class="thhhh"></td>
+                                    </tr><% personalClass.forEach((v ,index)=> { %><tr>
+                                            <td class="tdddd"><%= v.sdate %></td>
+                                            <td class="tdddd"><%= v.stime %>-<%= v.etime %></td>
+                                            <td class="tdddd"><%= v.building %></td>
+                                            <td class="tdddd"><%= v.cname %></td>
+                                            <td class="tdddd"><%= v.state %></td>
+                                            <td class="tdddd"><a class="user_link" id="detailed_information_up"
+                                                    onclick="document.getElementById('id03').style.display='block'">取消</a>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 團體課程 -->
+                        <h3 class="h3color mt-3"><span class="material-symbols-outlined">rowing</span>團體課程</h3>
+                        <div class="mt-3">
+                            <div>
+                                <table>
+                                    <tr class="bg-light">
+                                        <td class="thhhh">日期</td>
+                                        <td class="thhhh">時間</td>
+                                        <td class="thhhh">場館</td>
+                                        <td class="thhhh">課程</td>
+                                        <td class="thhhh">狀態</td>
+                                        <td class="thhhh"></td>
+                                    </tr><% teamClass.forEach((v ,index)=> { %><tr>
+                                            <td class="tdddd"><%= v.sdate %></td>
+                                            <td class="tdddd"><%= v.stime %>-<%= v.etime %></td>
+                                            <td class="tdddd"><%= v.building %></td>
+                                            <td class="tdddd"><%= v.csname %></td>
+                                            <td class="tdddd"><%= v.state %></td>
+                                            <td class="tdddd"><a class="user_link" id="detailed_information_up"
+                                                    onclick="document.getElementById('id03').style.display='block'">取消</a>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 空間 -->
+                        <h3 class="h3color mt-3"><span class="material-symbols-outlined">kitesurfing</span>空間預約</h3>
+                        <div class="mt-3">
+                            <div>
+                                <table>
+                                    <tr class="bg-light">
+                                        <td class="thhhh">日期</td>
+                                        <td class="thhhh">時間</td>
+                                        <td class="thhhh">場館</td>
+                                        <td class="thhhh">空間</td>
+                                        <td class="thhhh">狀態</td>
+                                        <td class="thhhh"></td>
+                                    </tr><% space.forEach((v ,index)=> { %><tr>
+                                        <td class="tdddd"><%= v.sdate %></td>
+                                        <td class="tdddd"><%= v.stime %>-<%= v.etime %></td>
+                                        <td class="tdddd"><%= v.building %></td>
+                                        <td class="tdddd"><%= v.space_name %></td>
+                                        <td class="tdddd"><%= v.state %></td>
+                                        <td class="tdddd"><button class="user_link" id="space_details_up"
+                                                
+                                                >取消</button>
+                                        </td>
+                                        </tr>
+                                        <% }) %>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 兌換紀錄 -->
+                    <div id="exchangerecord" class="tab-pane mt-2">
+                        <h3 class="h3color"><span class="material-symbols-outlined">snowboarding</span>兌換紀錄</h3>
+                        <div class="mt-3">
+                            <table>
+                                <tr style="border-bottom: solid 2px gray;" class="bg-light">
+                                    <td>兌換日期</td>
+                                    <td>兌換編號</td>
+                                    <td>商品名稱</td>
+                                    <td>商品積分</td>
+                                </tr><% purchase.forEach((v ,index)=> { %><tr>
+                                        <td><%= v.pdate %></td>
+                                        <td><%= v.purchaseid %></td>
+                                        <td><%= v.totalitem %></td>
+                                        <td><%= v.totalprice %></td>
+                                    </tr>
+                                    <% }) %>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 彈跳視窗 -->
+
+    <!-- 修改個人資料 -->
+    <div id="id01" class="modal">
+        <div class="d-flex justify-content-center mt-2">
+            <form class="animate">
+                <div class="imgcontainer">
+                    <img src=<%=person[0].avatar %> alt="Avatar" class="avatar">
+                </div>
+                <div class="up_window text-center">
+                    <h4>修改個人資訊</h4>
+                    <div>
+                        <label class="modify_label" for="phone">手機&nbsp;&nbsp;<input class="modify_input mt-3 p-3"
+                                name="phone" type="tel" placeholder="0900-112233"></label><br>
+                        <label class="modify_label" for="phone">信箱&nbsp;&nbsp;<input class="modify_input mt-3 p-3"
+                                name="email" type="email" placeholder="AAA@BBB.COM"></label><br>
+                        <label class="modify_label" for="phone">地址&nbsp;&nbsp;<input class="modify_input mt-3 p-3"
+                                name="address" type="text" placeholder="台中市南屯區黎明路二段555號"></label>
+                    </div>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="cancelbtn">取消</button>
+                    <button  class="okbtn submit" type="submit">確認</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 修改密碼 -->
+    <div id="id02" class="modal">
+        <div class="d-flex justify-content-center mt-2">
+            <form id="changepassword" class="animate">
+                <div class="imgcontainer">
+                    <img src=<%=person[0].avatar %> alt="Avatar" class="avatar">
+                </div>
+                <div class="up_window text-center">
+                    <h4>修改密碼</h4>
+                    <label class="modify_label" for="oldpassword">原密碼　　　</label>
+                    <input class="modify_input mt-3 p-3" id="oldpassword" type="password">
+                    <br>
+                    <label class="modify_label" for="newpassword">新密碼　　　</label>
+                    <input class="modify_input mt-3 p-3" type="password">
+                    <br>
+                    <label class="modify_label" for="confirmpassword">確認新密碼　</label>
+                    <input class="modify_input mt-3 p-3" id="confirmpassword" type="password">
+                </div><br>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="cancelbtn">取消</button>
+                    <button type="submit" class="okbtn submit">確認</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 取消課程/教練/空間 -->
+    <div id="id03" class="modal mt-5">
+        <div class="d-flex justify-content-center mt-2">
+            <form id="" class="animate">
+                <div class="up_window text-center" style="width: 450px;">
+                    <h4>確定取消嗎？</h4>
+                    <div class="d-flex mt-3 justify-content-center">
+                        <div class="bg-light p-3">
+                            <p>日期：</p>
+                            <p>時間：</p>
+                            <p>場館：</p>
+                            <p>教練：</p>
+                        </div>
+                        <div class="p-3">
+                            <p>2023/4/12</p>
+                            <p>7:00-8:00</p>
+                            <p>文心店</p>
+                            <p>Peter</p>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="cancelbtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <footer></footer>
+    <script src="../js/appendnav.js"></script>
+    <script src="../js/appendfooter.js"></script>
+    <script>
+        var enter = JSON.parse(renderenter.innerHTML);
+        if(enter.length > 0){
+            console.log(enter[0]);
+            var op = $('#appointmentrecordinquiry');
+            console.log(op);
+            $('.aside span').eq(1).append(`${enter[0].enterdate}${enter[0].building}`);
+        }else{
+            $('.aside span').eq(1).append(`未有進出紀錄`);
+        }
+
+        document.getElementById('mode').addEventListener('click', function () {
+            document.body.classList.toggle("dark");
+            document.getElementById("nav").classList.toggle("dark");
+            document.getElementById("mode").classList.toggle("icon");
+        })
+        
+
+
+
+        $('.submit').click(function () {
+        var data = $(`#id01 form`).serializeArray();
+        JSONData = serializeToJSON(data);
+        console.log(JSONData);
+        $.ajax({
+            url: `/member/update`,
+            type: "PUT",
+            contentType: "application/json; charset=utf-8",
+            data: JSONData,
+            success: function (res) {
+                var res = JSON.parse(res)
+                    console.log(res);
+                    if (res.errno === 1) {
+                        location.reload()
+                    } else if (res.errno === 0) {
+                        alert("更新失敗!")
+                    }
+                },
+                error: function () {
+                    alert("更新系統錯誤!")
+                }
+            })
+        }
+    )
+    $('.cancelbtn').click(function () {
+        var closemodal = $(this).parents(".modal");
+        closemodal.css("display","none");
+    })
+    //序列化轉JSON
+    function serializeToJSON(toArray) {
+    var vtoString = {};
+    for (index in toArray) {
+        vtoString[toArray[index].name] = toArray[index].value;
+    }
+    return JSON.stringify(vtoString)
+    }
+    </script>
+</body>
+
+</html>

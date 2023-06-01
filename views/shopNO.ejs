@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商店</title>
+    <!-- navbar -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-fixed/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/jQuery-3.6.3.min.js"></script>
+
+    <link rel="stylesheet" href="../css/shop/illustrate.css">
+    <link rel="stylesheet" href="../css/shop/stereoscopic.css">
+    <link rel="stylesheet" href="../css/shop/tab.css">
+    <link rel="stylesheet" href="../css/shop/dropdown.css">
+    <link rel="stylesheet" href="../css/shop/tabcontent.css">
+    <link rel="stylesheet" href="../css/shop/pop.css">
+    <link rel="stylesheet" href="../css/shop/modal.css">
+    <link rel="stylesheet" href="../css/shop/counterTotal.css">
+    <link rel="stylesheet" href="../css/shop/venueAndCollect.css">
+
+    <!-- body -->
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <!-- navbar -->
+        <div id="appendnav"></div>
+
+
+        <!-- 首圖 -->
+        <div class="col-md-12" style="width: 100%;">
+            <img src="../img/page/head_4_1.png" alt="" style="width:100%;object-fit:cover;border-radius: 0 300px 0 0;">
+        </div>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </header>
+
+    <!-- 我的收藏按鈕 -->
+    <div style="position: fixed; right: 0; top: 100px; z-index: 100;">
+        <button onclick="openPopup()">我的收藏</button>
+    </div>
+
+    <br><br>
+
+    <!-- 積分說明 -->
+    <div class="container illustrate">
+        <div class="row illustrateContent">
+            <div class="col-6 illustrateContentLeft">
+                <p>積分換好禮！！！</p>
+            </div>
+            <div class="col-6 illustrateContentRight">
+                <div class="row illustrateRow">
+                    <div class="col-3 illustrateRowRight">
+                        <p>說明</p>
+                    </div>
+                    <div class="col-9">
+                        <p>
+                            領悟其中的道理也不是那麼的困難。毛澤東曾說過一句意義深遠的話，經濟並不意味著消費貨幣，也不意。但願各位能從這段話中獲得心靈上的滋長。斯賓塞說過一句發人省思的話，要快樂首先要健康。這段話讓我所有的疑惑頓時豁然開朗。運動的出現，必將帶領人類走向更高的巔峰。面對如此難題，我們必須設想周全。運動勢必能夠左右未來。了解清楚運動到底是一種怎麼樣的存在，是解決一切問題的關鍵。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 您的積分 -->
+    <div class="m-5">
+        <span style="border-left: solid 5px #7935DA; float: right;">
+            您的積分:
+        </span>
+    </div>
+
+    <br><br><br>
+
+    <!-- 積分前三 -->
+    <div class="container stereoscopic">
+        <div class="row stereoscopicRow">
+            <div class="col-6 stereoscopicRowHalf">
+                <div>
+                    <p>NO.1</p>
+                    <p>飛輪訓練健身車</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="wrap">
+                    <div class="card">
+                        <div class="rolebg">
+                            <img src="../img/shop/007.png" alt="">
+                        </div>
+                        <div class="role">
+                            <img src="../img/shop/pngimg.com - gym_equipment_PNG20.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row stereoscopicRow">
+            <div class="col-6">
+                <div class="wrap">
+                    <div class="card">
+                        <div class="rolebg">
+                            <img src="../img/shop/007.png" alt="">
+                        </div>
+                        <div class="role">
+                            <img src="../img/shop/pngimg.com - gym_equipment_PNG4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 stereoscopicRowHalf">
+                <div>
+                    <p>NO.2</p>
+                    <p>飛輪訓練健身車</p>
+                </div>
+            </div>
+        </div>
+        <div class="row stereoscopicRow">
+            <div class="col-6 stereoscopicRowHalf">
+                <div>
+                    <p>NO.3</p>
+                    <p>飛輪訓練健身車</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="wrap">
+                    <div class="card">
+                        <div class="rolebg">
+                            <img src="../img/shop/007.png" alt="">
+                        </div>
+                        <div class="role">
+                            <img src="../img/shop/pngimg.com - gym_equipment_PNG3.png  " alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <!-- 產品分類 -->
+    <div class="tab container">
+        <div>
+            <button type="button" class="tablinks" onclick="openProduct(event, 'whole')">全部</button>
+            <button type="button" class="tablinks" onclick="openProduct(event, 'Nutrition')">營養補給品</button>
+            <button type="button" class="tablinks" onclick="openProduct(event, 'Massage')">舒緩按摩</button>
+            <button type="button" class="tablinks" onclick="openProduct(event, 'Equipment')">健身器材</button>
+
+        </div>
+
+        <div class="dropdown">
+            <button type="button" onclick="myFunction()" class="dropbtn">排序</button>
+            <div id="myDropdown" class="dropdown-content">
+                <button onclick="sortLowToHigh()">價格:低至高</button>
+                <button onclick="sortHighToLow()">價格:高至低</button>
+                <button onclick="sortByPopularity()">熱門程度優先</button>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- 商品列表 -->
+    <div id="whole" class="tabcontent" style="display: block;">
+        <div class="container ">
+            <div class="row apple">
+                <% for(let i=0; i<products.length; i++) { %>
+                    <div class="col-3 tabmodal">
+                        <div class="product-div" data-bs-toggle="modal" data-bs-target="#buy_modal"
+                            data-id="<%= products[i].products_id %>" data-name="<%= products[i].products_name %>"
+                            data-price="<%= products[i].products_price %>"
+                            data-images="<%= products[i].products_image %>"
+                            data-description="<%= products[i].products_description %>"
+                            data-purchasesNumber="<%= products[i].purchases_number %>">
+                            <div>
+                                <img src="<%= products[i].products_image %>">
+                            </div>
+                            <div>
+                                <button>
+                                    <%= products[i].products_name %>
+                                        <br>
+                                        <%= products[i].products_price %>點
+                                            <br>
+                                            購買次數: <%= products[i].purchases_number %>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>
+
+    <div id="Nutrition" class="tabcontent">
+        <div class="container">
+            <div class="row apple">
+                <% for(let i=0; i<nutritional.length; i++) { %>
+                    <div class="col-3 tabmodal">
+                        <div class="product-div" data-bs-toggle="modal" data-bs-target="#buy_modal"
+                            data-id="<%= nutritional[i].products_id %>" data-name="<%= nutritional[i].products_name %>"
+                            data-price="<%= nutritional[i].products_price %>"
+                            data-images="<%= nutritional[i].products_image %>"
+                            data-description="<%= nutritional[i].products_description %>"
+                            data-purchasesNumber="<%= nutritional[i].purchases_number %>">
+                            <div>
+                                <img src="<%= nutritional[i].products_image %>">
+                            </div>
+                            <div>
+                                <button>
+                                    <%= nutritional[i].products_name %>
+                                        <br>
+                                        <%= nutritional[i].products_price %>點
+                                            <br>
+                                            購買次數: <%= nutritional[i].purchases_number %>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>
+
+    <div id="Massage" class="tabcontent">
+        <div class="container">
+            <div class="row apple">
+                <% for(let i=0; i<massage.length; i++) { %>
+                    <div class="col-3 tabmodal">
+                        <div class="product-div" data-bs-toggle="modal" data-bs-target="#buy_modal"
+                            data-id="<%= massage[i].products_id %>" data-name="<%= massage[i].products_name %>"
+                            data-price="<%= massage[i].products_price %>"
+                            data-images="<%= massage[i].products_image %>"
+                            data-description="<%= massage[i].products_description %>"
+                            data-purchasesNumber="<%= massage[i].purchases_number %>">
+                            <div>
+                                <img src="<%= massage[i].products_image %>">
+                            </div>
+                            <div>
+                                <button>
+                                    <%= massage[i].products_name %>
+                                        <br>
+                                        <%= massage[i].products_price %>點
+                                            <br>
+                                            購買次數: <%= massage[i].purchases_number %>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>
+
+    <div id="Equipment" class="tabcontent">
+        <div class="container">
+            <div class="row apple">
+                <% for(let i=0; i<nutritional.length; i++) { %>
+                    <div class="col-3 tabmodal">
+                        <div class="product-div" data-bs-toggle="modal" data-bs-target="#buy_modal"
+                            data-id="<%= equipment[i].products_id %>" data-name="<%= equipment[i].products_name %>"
+                            data-price="<%= equipment[i].products_price %>"
+                            data-images="<%= equipment[i].products_image %>"
+                            data-description="<%= equipment[i].products_description %>"
+                            data-purchasesNumber="<%= equipment[i].purchases_number %>">
+                            <div>
+                                <img src="<%= equipment[i].products_image %>">
+                            </div>
+                            <div>
+                                <button>
+                                    <%= equipment[i].products_name %>
+                                        <br>
+                                        <%= equipment[i].products_price %>點
+                                            <br>
+                                            購買次數: <%= equipment[i].purchases_number %>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 我的收藏列表 -->
+    <div id="popup" class="pop">
+        <br><br><br>
+        <button class="closureBtn" onclick="closePopup()">關閉</button>
+        <br>
+        <br>
+        <div class="test">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>縮圖</th>
+                        <th>產品名稱</th>
+                        <th>單價</th>
+                        <th>刪除</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- 我的收藏js -->
+    <script>
+        function openPopup() {
+            document.getElementById('popup').classList.add('show');
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.remove('show');
+        }
+    </script>
+
+    <!-- 彈出商品選項 -->
+    <% for(let i=0; i<products.length; i++) { %>
+        <form>
+            <div class="modal fade modal-product" id="buy_modal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header modalTitle">
+                            <h1 class="productName"></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal_img">
+                                <div class="row modal_img_content">
+                                    <div class="modal_img_style">
+                                        <div>
+                                            <img class="productImages">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li class="description">
+                                    非常適合團體健身車訓練課程
+                                </li>
+                            </ul>
+                            <p>單價: <span class="price"></span> 點</p>
+                            <div class="counterTotal">
+                                <div class="counter">
+                                    <input type="button" id="plus" value="+">
+                                    <input type="text" id="result" value="">
+                                    <input type="button" id="minus" value="-">
+                                </div>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>
+                                    兌換積分: <span class="totalPrice"></span>點
+                                </span>
+                                &nbsp;&nbsp;&nbsp;
+                            </div>
+
+                            <br>
+
+                            <div class="venueAndCollect">
+                                <select class="venue" name="" id="">
+                                    <option value="">選擇提領場館</option>
+                                    <option value="Taipei">台北館</option>
+                                    <option value="Taichung">台中館</option>
+                                    <option value="Tainan">台南館</option>
+                                </select>
+
+                                <button class="collect" type="button">
+                                    <i class="bi bi-heart">加入收藏</i>
+                                </button>
+                                <!-- <button>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </button> -->
+
+                            </div>
+                        </div>
+                        <div class="modal-footer purchaseBtn">
+                            <button type="button">兌換</button>
+                        </div>
+                    </div>
+                </div>
+        </form>
+        <% } %>
+
+
+        <div class="b-example-divider"></div>
+        <footer></footer>
+        <script>var token ="<%= token%>"</script>
+        <script src="../js/appendnav.js"></script>
+        <script src="../js/appendfooter.js"></script>
+
+            <!-- 商品分類js -->
+            <script>
+                function openProduct(evt, productName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(productName).style.display = "block";
+                    evt.currentTarget.className += " active";
+
+                }
+
+            </script>
+
+            <!-- 排序js -->
+            <script>
+                /*  
+                    When the user clicks on the button,           
+                    toggle between hiding and showing the dropdown content 
+                */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                // Close the dropdown menu if the user clicks outside of it
+                window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+            </script>
+
+            <!-- 抓資料進modal，jquery -->
+            <script>
+                $('.product-div').on('click', function () {
+                    var id = $(this).data('id');
+                    var name = $(this).data('name');
+                    var price = $(this).data('price');
+                    var images = $(this).data('images');
+                    var description = $(this).data('description');
+
+                    $('.productName').text(name);
+                    $('.productImages').attr('src', images)
+                    $('.description').text(description);
+                    $('.price').text(price);
+                    $('.totalPrice').text(price);
+                    $('#result').val(1); // 將計數器的值設為1
+
+                    // ------------------------------------------------------
+                    // 計數器js
+                    var x = document.getElementById('plus');
+                    var y = document.getElementById('minus');
+                    var z = document.getElementById('result');
+
+                    var result = 1;
+
+                    x.addEventListener('click', function () {
+                        result++;
+                        z.value = result;
+                        var price = document.querySelector('.price').innerHTML;
+                        var totalPrice = parseInt(price) * parseInt(z.value);
+                        document.querySelector('.totalPrice').innerHTML = totalPrice;
+                    });
+
+                    y.addEventListener('click', function () {
+                        if (result > 1) {
+                            result--;
+                            z.value = result;
+                            var price = document.querySelector('.price').innerHTML;
+                            var totalPrice = parseInt(price) * parseInt(z.value);
+                            document.querySelector('.totalPrice').innerHTML = totalPrice;
+                        }
+                    });
+
+                });
+
+                // // 離開時 result 設為 1
+                // $('#buy_modal').on('hidden.bs.modal', function () {
+                //     $('#result').val(1);
+                // })
+
+                // ------------------------------------------------
+                // 點擊加入收藏
+                $('.collect').on('click', function () {
+                    var images = $('.productImages').attr('src');
+                    var name = $('.productName').html();
+                    var price = $('.price').html(); // 為何用text()會變成很多個?
+
+                    console.log(images);
+                    console.log(name);
+                    console.log(price);
+
+                    function getcollect() {
+                        $.ajax({
+                            type: "post",
+                            url: "http://localhost:5000/collect",
+                            data: {
+                                images,
+                                name,
+                                price
+                            },
+                            success: function () {
+                                alert('okk');
+                            }
+                        })
+
+                        $('tbody').append(`
+                        <tr>
+                            <td>
+                                <img src="${images}">
+                            </td>
+                            <td>${name}</td>
+                            <td>${price}</td>
+                            <td><button>刪除</button></td>
+                        </tr>
+                    `)
+                    }
+
+                    getcollect();
+
+                })
+
+            </script>
+
+            <!-- 收藏刪除 -->
+            <script>
+                $('.deleteBtn').on('click', function () {
+                    var id = $(this).data('id');
+                    alert(id);
+                    var $row = $(this).closest('tr'); // 取得被按鈕包覆的 tr 元素
+                    $.ajax({
+                        type: "DELETE",
+                        url: "http://localhost:5000/collect",
+                        data: {
+                            id
+                        },
+                        success: function () {
+                            alert('ookk');
+                            $row.remove(); // 從 DOM 中移除該行元素
+                        }
+                    })
+
+                })
+            </script>
+
+            <!-- 排序js -->
+            <script>
+                function sortLowToHigh() {
+                    // 獲得商品列表
+                    let tabcontent = document.querySelectorAll('.tabcontent');
+
+                    // 獲得display: block的商品列表
+                    let selectedTabcontent = document.querySelector('.tabcontent[style="display: block;"] .apple')
+
+                    // 原本的
+                    let selectedProductdiv = Array.from(selectedTabcontent.querySelectorAll('.product-div'));
+
+                    // 經過排序的
+                    let sortedLowToHigh = selectedProductdiv.slice().sort(function (a, b) {
+                        return a.getAttribute('data-price') - b.getAttribute('data-price');
+                    })
+
+                    for (let i = 0; i < sortedLowToHigh.length; i++) {
+                        console.log(sortedLowToHigh[i]);
+                    }
+                    selectedTabcontent.innerHTML = "";
+                    sortedLowToHigh.forEach(function (value, index, array) {
+                        let div = document.createElement('div');
+                        div.className = 'col-3 tabmodal';
+                        div.appendChild(value);
+                        selectedTabcontent.appendChild(div);
+                    })
+
+                }
+                function sortHighToLow() {
+                    // 獲得商品列表
+                    let tabcontent = document.querySelectorAll('.tabcontent');
+
+                    // 獲得display: block的商品列表
+                    let selectedTabcontent = document.querySelector('.tabcontent[style="display: block;"] .apple')
+
+                    // 原本的
+                    let selectedProductdiv = Array.from(selectedTabcontent.querySelectorAll('.product-div'));
+
+                    // 經過排序的
+                    let sortedLowToHigh = selectedProductdiv.slice().sort(function (a, b) {
+                        return b.getAttribute('data-price') - a.getAttribute('data-price');
+                    })
+
+                    for (let i = 0; i < sortedLowToHigh.length; i++) {
+                        console.log(sortedLowToHigh[i]);
+                    }
+                    selectedTabcontent.innerHTML = "";
+                    sortedLowToHigh.forEach(function (value, index, array) {
+                        let div = document.createElement('div');
+                        div.className = 'col-3 tabmodal';
+                        div.appendChild(value);
+                        selectedTabcontent.appendChild(div);
+                    })
+
+                }
+                function sortByPopularity() {
+                    // 獲得商品列表
+                    let tabcontent = document.querySelectorAll('.tabcontent');
+
+                    // 獲得display: block的商品列表
+                    let selectedTabcontent = document.querySelector('.tabcontent[style="display: block;"] .apple')
+
+                    // 原本的
+                    let selectedProductdiv = Array.from(selectedTabcontent.querySelectorAll('.product-div'));
+
+                    // 經過排序的
+                    let sortedLowToHigh = selectedProductdiv.slice().sort(function (a, b) {
+                        return b.getAttribute('data-purchasesNumber') - a.getAttribute('data-purchasesNumber');
+                    })
+
+                    for (let i = 0; i < sortedLowToHigh.length; i++) {
+                        console.log(sortedLowToHigh[i]);
+                    }
+                    selectedTabcontent.innerHTML = "";
+                    sortedLowToHigh.forEach(function (value, index, array) {
+                        let div = document.createElement('div');
+                        div.className = 'col-3 tabmodal';
+                        div.appendChild(value);
+                        selectedTabcontent.appendChild(div);
+                    })
+
+                }
+
+            </script>
+
+            <!-- 兌換 -->
+            <script>
+                $('.purchaseBtn').on('click', function () {
+                    var purchaseItem = $('.productName').html();
+                    var purchaseQuantity = $('#result').val();
+                    var totalPrice = $('.totalPrice').html();
+                    var select = $('.venue');
+                    var selectedVenue = select.val();
+
+                    var mid = 3;
+
+                    $.ajax({
+                        type: 'post',
+                        url: "http://localhost:5000/purchaselist",
+                        data: {
+                            mid,
+                            purchaseItem,
+                            purchaseQuantity,
+                            totalPrice,
+                            selectedVenue
+                        },
+                        success: function () {
+                            alert('post OK');
+                        }
+                    })
+                })
+            </script>
+
+</body>
+
+</html>

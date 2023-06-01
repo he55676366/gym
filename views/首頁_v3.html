@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+
+    <!-- navbar -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-fixed/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./navbar.css">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- ========== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <!--jQ-->
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- <script src="js/wow.min.js"></script>
+        <script>
+        new WOW().init();
+        </script> -->
+
+    <link rel="stylesheet" href="./navbar.css">
+    <link href="../css/home.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="../js/home.js"></script>
+    <!-- 視差套件 -->
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+
+    <style>
+        body {
+            min-height: 75rem;
+            padding-top: 4.5rem;
+            background-color: #003B64;
+            font-family: "Taipei Sans";
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="material-symbols-outlined" style="font-size: 38px;color:black">exercise</i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color:gray"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <!-- <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">最新消息</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">關於我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">課程與設備</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">會員專區</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">商城</a>
+                    </li>
+                </ul>
+                <div class="d-flex" role="search">
+                    <i class="material-symbols-outlined" style="font-size: 36px;">person</i>
+                    <i id="mode" class="material-symbols-outlined" style="font-size: 33px;">dark_mode</i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- up -->
+    <a class="up" href="#"><i class="bi bi-chevron-up"></i></i></a>
+
+    <!-- 小訊息 -->
+    <!-- <div style=" position: relative">
+        <div>
+            <swiper-container class="mySwiper sw" direction="vertical" pagination="true" pagination-clickable="true"
+                style="position:absolute;
+                         top: 210px;left: 7%;  height: 150px;width: 28%;">
+                <swiper-slide><img style="margin-left: 10%; object-fit:cover;  "
+                        src="../img/2_20230201200614loy309J6C0.jpg"></swiper-slide>
+                <swiper-slide><img style="margin-left: 10%; object-fit:cover;  "
+                        src="../img/2_202304301513203f6m6hcoB3.jpg"></swiper-slide>
+                <swiper-slide>消息3</swiper-slide>
+
+            </swiper-container>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+        </div>
+    </div> -->
+
+    <!-- 免費體驗F -->
+    <div class="float1" style="z-index: 5 ; float: right;
+    position: absolute;
+    top: 100px;
+    left: 70%;">
+        <div class="animate__animated  animate__bounceInRight" style="position: absolute ;left: 70%;top: 350px; height: 400px;width: 300px;
+                border:solid 8px rgb(255, 255, 255);border-radius: 10px; background-color: #ff8855f0; ">
+            <h2 style="margin: 15px;color: #ffffff;"><strong>免費體驗</strong></h2>
+            <p style="margin: 15px;color: #ffffff;">我們需要淘汰舊有的觀念，做好體眼這件事，
+                可以說已經成為了全民運動。</p>
+            <br><br>
+            <div style="position:absolute;left: 40%;top: 320px;">
+                <div  style="border:0  ;background-color:none">
+                    <img style="height: 45px;" id="show" src="../img/10.png"></div>
+            </div>
+        </div>
+        <dialog id="infoModal" style="border-color: #fdb68c; border-radius: 12px;">
+            <form>
+                <div class="form-group">
+                    <input name="Name" type="text" class="form-control" placeholder="姓名" required="required" minlength="2" />
+                </div>
+                <div class="form-group">
+                    <input name="Tel" class="form-control" type="text" placeholder="手機號碼" required="required"
+                        maxlength="10" pattern="09\d{8}" oninput="setCustomValidity('');"
+                        oninvalid="setCustomValidity('請輸入手機號碼')" />
+                </div>
+            </form>
+            <p style="padding:0 10px;" >感謝填寫，將有專人與您聯絡!</p>
+
+            <button id="close" style="margin-top:10px;height: 33px;width: 80px; background-color: #ff8855f0;color: rgb(255, 255, 255); 
+            font: size 22px ;border-radius: 12px;border: #ffffff00;">關閉</button>
+        </dialog>
+        <script>
+            let btn = document.querySelector("#show");
+            let infoModal = document.querySelector("#infoModal");
+            let close = document.querySelector("#close");
+            btn.addEventListener("click", function () {
+                infoModal.showModal();
+            })
+            close.addEventListener("click", function () {
+                infoModal.close();
+            })
+        </script>
+    </div>
+
+    <!-- 首圖 -->
+    <div style="margin-left: 10%; height: 500px;width: 90%;  background-color: #fdb68c;border-radius:  300px 0 0 12px;">
+        <img style="margin-left: 10%; object-fit:cover;height: 500px;width: 90%; 
+        background-color: #fdb68c;border-radius:  250px 0 0 0;" src="../img/77.jpg">
+
+    </div>
+
+    <!-- 左右 -->
+    <div class="container" style="margin-top:50px ;">
+
+        <div class=" row " style="background-color: rgba(0, 255, 255, 0); ">
+
+            <!-- 會員方案 -->
+            <!-- 現在加入 -->
+            <div class="col-md-7" style="height:400px ; background-color: rgba(255, 208, 161, 0);">
+                <div>
+                    <swiper-container class="mySwiper sw" direction="vertical" pagination="true"
+                        pagination-clickable="true" style="height: 350px;width: 100%;">
+
+                        <swiper-slide><img style=" object-fit:cover;  "
+                                src="../img/2_20230201200614loy309J6C0.png"></swiper-slide>
+                        <swiper-slide><img style=" object-fit:cover;  "
+                                src="../img/2_202304301513203f6m6hcoB3.jpg"></swiper-slide>
+                        <swiper-slide>消息3</swiper-slide>
+
+                    </swiper-container>
+
+                    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+                </div>
+
+            </div>
+            <!-- 右圖 -->
+            <div class=" col-md-5 text-center "
+                style=" z-index: 3;  height:450px;width: 420px; background-color: rgba(248, 255, 154, 0); margin:0px 0  0 0% ;">
+                <div><img style="border-radius: 200px; object-fit:cover ;height: 700px;width: 400px;"
+                        src="../img/11.jpg">
+
+                </div>0
+            </div>
+
+        </div>
+
+
+        <!--連連看-->
+        <div style="height: 600px; 
+         background-color: rgba(211, 81, 81, 0);
+        color: #ffffff;  position: relative;background-image:url(../)">
+
+            <div style="border: #ffeab600 2px ;">
+                <p class=" demotext " style=""><strong>您適合什麼類型的課程?</strong></p>
+            </div>
+
+
+            <div>
+                <svg viewBox="0 0 80 150">
+                    <polygon id="LineA" class="circleLine" points="
+                10 8,
+           
+                20 26" />
+                    <polygon id="LineC" class="circleLine" points="
+                20 14,
+                
+                8 20,
+                " />
+                    <polygon id="LineB" class="circleLine" points="
+                29 2,
+                32 21" />
+                </svg>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-3" style="
+            top: 90px;z-index: 3; text-align: center; 
+            position: absolute;  background-color: #63ae9200;">
+                    <button id="pointAButton" class="test " style="position: relative;">
+                        <img height="150px" src="../img/home/bu1.png" alt="" style="display: block; margin: 0 auto;">
+                        <span class="buttonText">
+                            增肌增力
+                        </span>
+                    </button>
+                </div>
+
+
+                <div class="col-md-9 " style="
+            top: 90px;
+            z-index: 2;position: absolute;
+            text-align: center; background-color: rgba(250, 255, 222, 0);">
+                    <button id="pointBButton" class="test" style="position: relative;">
+                        <img height="135px" src="../img/home/bu1.png" alt="" style="display: block; margin: 0 auto;">
+                        <span class="buttonText">
+                            身心紓壓
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="row col-md-6" style="
+            top: 200px;z-index: 4; position: absolute; background-color: rgba(136, 255, 132, 0);">
+                <div style="text-align: center;background-color: rgba(255, 232, 150, 0);">
+                    <button id="pointCButton" class="test" style="position: relative;">
+                        <img height="170px" src="../img/home/bu1.png" alt="" style="display: block; margin: 0 auto;">
+                        <span class="buttonText">
+                            塑形減脂
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- 答 -->
+
+            <div class="row">
+                <div class="col-md-2" style="
+            top: 390px; z-index: 6; position: absolute; text-align: center; background-color: rgba(255, 147, 221, 0);">
+                    <button id="pointAans" class="test" style="position: relative;">
+                        <img height="100px" src="../img/home/bu.png" alt="" style="display: block; margin: 0 auto;">
+                        <span class="buttonText">
+                            有氧
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10" style="
+            top: 410px;z-index: 5; position: absolute; text-align: center; background-color: rgba(99, 174, 146, 0);">
+                    <button id="pointBans" class="test" style="position: relative;">
+                        <img height="100px" src="../img/home/bu.png" alt="" style="display: block; margin: 0 auto;">
+                        <span class="buttonText">
+                            瑜珈
+                        </span>
+                    </button>
+                </div>
+                <div class="col-md-6" style="
+        top: 480px;z-index: 7;  position: absolute;text-align: center; background-color: rgba(174, 99, 115, 0);">
+                    <button id="pointCans" class="test" style="position: relative;">
+                        <img height="100px" src="../img/home/bu.png" alt="" style="display: block; margin: 0 auto;">
+                        <span class="buttonText">
+                            重訓
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- 介紹 -->
+    <!-- 大區塊 -->
+    <div class=" row" style=" background-color: #ffe6d2e9;margin: 30px 0; padding: 5%;">
+        <div class="d-flex justify-content-center">
+            <p style=" background-color: rgba(127, 149, 95, 0);color: black;font-size: 48px;"><strong>
+                    Vitality Gym 健身房</strong></p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p style="background-color: rgba(255, 216, 208, 0);color: black;font-size: 48px;"><strong>
+                    致力於為您提供最佳的健身體驗</strong></p>
+        </div>
+
+        <div class="container d-flex justify-content-center" style="padding: 0 100px; ">
+
+            <p class="promtext" style="padding: 10px;">
+                <i class="bi bi-hexagon-fill" style="color: #ff5e42;"></i> 專業教練團隊
+                <i class="bi bi-hexagon" style="color: #ff5e42;"></i> 個人化指導
+                <i class="bi bi-hexagon-fill" style="color: #ff5e42;"></i> 多樣化的課程選擇
+                <i class="bi bi-hexagon" style="color: #ff5e42;"></i> 輕鬆預約流程
+                <i class="bi bi-hexagon-fill" style="color: #ff5e42;"></i> 會員積分換好禮
+                <i class="bi bi-hexagon" style="color: #ff5e42;"></i>
+            </p>
+
+        </div>
+
+
+
+        <!-- 1 師資-->
+        <div class="col-md-6 mx-auto" style="background-color: #a9548b00; padding-top: 30px;">
+            <div onclick="showLeftSlide()" style="justify-content: center;">
+
+                <div class=" popuptext contentText" id="popup_text_left">
+                    <pre>
+專業知識和經驗：
+我們的教練團隊都是經驗豐富且專業的健身教練，
+他們將引導和協助您在健身旅程中取得最佳效果。
+您可以在教練個人資訊中了解更多。
+
+個人化指導：
+我們的教練團隊重視每位會員的個人需求和目標。
+他們將根據您的興趣和身體狀況提供訓練計劃。
+</pre>
+                    <button class="col-md-12 text-md-end" style="background-color: #ffffff00;"><i
+                            class="bi bi-chevron-right" style="color: #ffffff;"></i></button>
+
+                </div>
+
+                <div class=" imagecon" style=" position: relative;
+                        display: inline-block ">
+
+                    <img class="intervborder" src="../img/home/home (1).JPG">
+
+                    <span class="intertext">
+                        師資
+                    </span>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 2 課程-->
+        <div class="row " style="margin-top: 20px;">
+            <div class="col-md-6  mx-auto" style="background-color: rgba(185, 222, 199, 0);">
+                <div class="col-md-12 text-md-end" style="background-color: #b7238300;">
+                    <div onclick="showRightSlide()">
+                        <div class="popuptext contentText text-md-start" id="popup_text_right">
+                            <pre>
+多樣化的課程選擇：
+我們提供各種類型的課程，
+無論您是喜歡有氧運動、重力訓練還是瑜伽，
+我們都有適合您的選項。
+您可以透過我們精簡的課程總覽輕鬆找到合適的課程。
+                            </pre>
+                            <button class="col-md-12 text-md-end" style="background-color: #ffffff00;"><i
+                                    class="bi bi-chevron-right" style="color: #ffffff;"></i></button>
+
+                        </div>
+                        <div class="imagecon" style="position: relative; display: inline-block ; ">
+
+                            <img class="intervborder" src="../img/home/home (2).JPG">
+
+                            <span class="intertext">課程</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 3 預約-->
+        <div class="col-md-6 mx-auto" style="margin-top: 20px; background-color: #b7238300;">
+            <div onclick="showLeftSlide2()">
+
+                <div class=" popuptext contentText" id="popup_text_Left2">
+                    <div>
+                        <pre>課程預約：
+線上查看各式各樣的課程，
+包括團體課程、個人教練和個人使用空間。
+您可以根據自己的需求和興趣預約您感興趣的課程。
+
+個人化設定和歷史紀錄：
+您可以透過個人資訊頁面查看您的預約情況、
+取消預約以及瀏覽過去參加的課程歷史。</pre> <button class="col-md-12 text-md-end" style="background-color: #ffffff00;"><i
+                                class="bi bi-chevron-right" style="color: #ffffff;"></i></button>
+
+                    </div>
+
+                </div>
+
+                <div class=" imagecon" style=" position: relative;
+                display: inline-block ">
+
+                    <img class="intervborder" src="../img/home/home (3).JPG">
+
+                    <span class="intertext">預約
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- 4 會員-->
+        <div class="row " style="margin-top: 20px;">
+            <div class="col-md-6 mx-auto " style="background-color: rgba(185, 222, 199, 0);">
+                <div class="col-md-12 text-md-end" style="background-color: #b7238300;">
+                    <div onclick="showRightSlide2()">
+                        <div class="popuptext contentText text-md-start " id="popup_text_Right2">
+
+                            <pre>
+積分獎勵：
+每次在健身房運動、參加課程或購買產品時，
+將獲得積分獎勵。
+
+多樣化的換禮品選項：
+我們精心挑選了各種高品質的運動器材、
+時尚的健身服飾、營養補充品、私人教練課程、
+健身活動門票等。</pre><button class="col-md-12 text-md-end" style="background-color: #ffffff00;"><i class="bi bi-chevron-right"
+                                    style="color: #ffffff;"></i></button>
+                        </div>
+
+
+                        <div class="imagecon" style="position: relative; display: inline-block ; ">
+
+                            <img class="intervborder" src="../img/home/home (6).JPG">
+
+                            <span class="intertext">會員</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--轉動方塊-->
+    <!-- <div>
+        <style>
+            .gallery {
+                --s: 100px;
+                /* the size */
+
+                display: grid;
+                transform-style: preserve-3d;
+                --_p: perspective(calc(2.5*var(--s)));
+                animation: r 25s infinite cubic-bezier(.5, -0.5, .5, 1.5);
+            }
+
+            .gallery img {
+                grid-area: 1/1;
+                width: var(--s);
+                aspect-ratio: 1;
+                object-fit: cover;
+                transform: var(--_t, ) translateZ(calc(var(--s)/2));
+            }
+
+            .gallery img:nth-child(2) {
+                --_t: rotateX(-90deg)
+            }
+
+            .gallery img:nth-child(3) {
+                --_t: rotateY(90deg) rotate(-90deg)
+            }
+
+            .gallery img:nth-child(4) {
+                --_t: rotateX(180deg) rotate(90deg)
+            }
+
+            .gallery img:nth-child(5) {
+                --_t: rotateX(90deg) rotate(90deg)
+            }
+
+            .gallery img:nth-child(6) {
+                --_t: rotateY(-90deg)
+            }
+
+            @keyframes r {
+
+                0%,
+                3% {
+                    transform: var(--_p)
+                }
+
+                14%,
+                19% {
+                    transform: var(--_p) rotateX(90deg)
+                }
+
+                31%,
+                36% {
+                    transform: var(--_p) rotateX(90deg) rotateX(90deg)
+                }
+
+                47%,
+                52% {
+                    transform: var(--_p) rotateX(90deg) rotateX(90deg) rotateX(90deg)
+                }
+
+                64%,
+                69% {
+                    transform: var(--_p) rotateX(90deg) rotateX(90deg) rotateX(90deg) rotateX(90deg)
+                }
+
+                81%,
+                86% {
+                    transform: var(--_p) rotateX(90deg) rotateX(90deg) rotateX(90deg) rotateX(90deg) rotateX(90deg)
+                }
+
+                97%,
+                100% {
+                    transform: var(--_p) rotateX(90deg) rotateX(90deg) rotateX(90deg) rotateX(90deg) rotateX(90deg) rotateX(90deg)
+                }
+            }
+
+
+            .cubebody {
+                margin: 0;
+                /* min-height: 100vh; */
+                display: grid;
+                place-content: center;
+                /* background: #556270; */
+                animation: b 9s infinite;
+            }
+
+            /* @keyframes b {
+            
+                    0%,
+                    3% {
+                        background: #774F38
+                    }
+            
+                    14%,
+                    19% {
+                        background: #C5E0DC
+                    }
+            
+                    31%,
+                    36% {
+                        background: #036564
+                    }
+            
+                    45%,
+                    55% {
+                        background: #B38184
+                    }
+            
+                    64%,
+                    69% {
+                        background: #424254
+                    }
+            
+                    81%,
+                    86% {
+                        background: #4DBCE9
+                    }
+            
+                    97%,
+                    to {
+                        background: #774F38
+                    }
+                } */
+        </style>
+
+        <div class="cubebody">
+            <div class="gallery">
+                <img src="../img/21.png">
+                <img src="../img/21.png">
+                <img src="../img/21.png">
+                <img src="../img/21.png">
+                <img src="../img/21.png">
+                <img src="../img/21.png">
+            </div>
+        </div>
+    </div> -->
+
+    <!--字轉動scrollText-->
+    <!-- <div>
+        <style>
+            .scrollText {
+                overflow: hidden;
+            }
+
+            .scontainer {
+                position: relative;
+                width: 100vw;
+                overflow: hidden;
+            }
+
+            .scrolling-text {
+                display: inline-block;
+                transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+                will-change: transform;
+                backface-visibility: hidden;
+            }
+
+            .scrolling-text .scrolling-text-content {
+                color: #fff;
+                font-size: 30px;
+                white-space: nowrap;
+                transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+                line-height: 1em;
+                margin: 50px 0;
+            }
+        </style>
+
+        <div class="scontainer scrollText" speed=60>
+            <div class='scrolling-text'>
+                <h2 class="scrolling-text-content">"Stay fit, shape the best version of yourself."</h2>
+            </div>
+        </div>
+        <div class="scontainer left-to-right scrollText" speed=100>
+            <div class='scrolling-text'>
+                <h2 class="scrolling-text-content">"Believe in yourself and take the leap."</h2>
+            </div>
+        </div>
+       
+        <script>
+            $(document).ready(function () {
+                var containers = $('.scontainer');
+
+                if (containers.length) {
+                    containers.each(function () {
+                        var scontainer = $(this);
+
+                        // Support small text - copy to fill screen width
+                        if (scontainer.find('.scrolling-text').outerWidth() < $(window).width()) {
+                            var windowToScrolltextRatio = Math.round($(window).width() / scontainer.find('.scrolling-text').outerWidth()),
+                                scrollTextContent = scontainer.find('.scrolling-text .scrolling-text-content').text(),
+                                newScrollText = '';
+                            for (var i = 0; i < windowToScrolltextRatio; i++) {
+                                newScrollText += ' ' + scrollTextContent;
+                            }
+                            scontainer.find('.scrolling-text .scrolling-text-content').text(newScrollText);
+                        }
+
+                        // Init variables and config
+                        var scrollingText = scontainer.find('.scrolling-text'),
+                            scrollingTextWidth = scrollingText.outerWidth(),
+                            scrollingTextHeight = scrollingText.outerHeight(true),
+                            startLetterIndent = parseInt(scrollingText.find('.scrolling-text-content').css('font-size'), 10) / 4.8,
+                            startLetterIndent = Math.round(startLetterIndent),
+                            scrollAmountBoundary = Math.abs($(window).width() - scrollingTextWidth),
+                            transformAmount = 0,
+                            leftBound = 0,
+                            rightBound = scrollAmountBoundary,
+                            transformDirection = scontainer.hasClass('left-to-right') ? -1 : 1,
+                            transformSpeed = 200;
+
+                        // Read transform speed
+                        if (scontainer.attr('speed')) {
+                            transformSpeed = scontainer.attr('speed');
+                        }
+
+                        // Make scrolling text copy for scrolling infinity
+                        scontainer.append(scrollingText.clone().addClass('scrolling-text-copy'));
+                        scontainer.find('.scrolling-text').css({ 'position': 'absolute', 'left': 0 });
+                        scontainer.css('height', scrollingTextHeight);
+
+                        var getActiveScrollingText = function (direction) {
+                            var firstScrollingText = scontainer.find('.scrolling-text:nth-child(1)');
+                            var secondScrollingText = scontainer.find('.scrolling-text:nth-child(2)');
+
+                            var firstScrollingTextLeft = parseInt(scontainer.find('.scrolling-text:nth-child(1)').css("left"), 10);
+                            var secondScrollingTextLeft = parseInt(scontainer.find('.scrolling-text:nth-child(2)').css("left"), 10);
+
+                            if (direction === 'left') {
+                                return firstScrollingTextLeft < secondScrollingTextLeft ? secondScrollingText : firstScrollingText;
+                            } else if (direction === 'right') {
+                                return firstScrollingTextLeft > secondScrollingTextLeft ? secondScrollingText : firstScrollingText;
+                            }
+                        }
+
+                        $(window).on('wheel', function (e) {
+                            var delta = e.originalEvent.deltaY;
+
+                            if (delta > 0) {
+                                // going down
+                                transformAmount += transformSpeed * transformDirection;
+                                scontainer.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(10deg)');
+                            }
+                            else {
+                                transformAmount -= transformSpeed * transformDirection;
+                                scontainer.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(-10deg)');
+                            }
+                            setTimeout(function () {
+                                scontainer.find('.scrolling-text').css('transform', 'translate3d(' + transformAmount * -1 + 'px, 0, 0)');
+                            }, 10);
+                            setTimeout(function () {
+                                scontainer.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(0)');
+                            }, 500)
+
+                            // Boundaries
+                            if (transformAmount < leftBound) {
+                                var activeText = getActiveScrollingText('left');
+                                activeText.css({ 'left': Math.round(leftBound - scrollingTextWidth - startLetterIndent) + 'px' });
+                                leftBound = parseInt(activeText.css("left"), 10);
+                                rightBound = leftBound + scrollingTextWidth + scrollAmountBoundary + startLetterIndent;
+
+                            } else if (transformAmount > rightBound) {
+                                var activeText = getActiveScrollingText('right');
+                                activeText.css({ 'left': Math.round(rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent) + 'px' });
+                                rightBound += scrollingTextWidth + startLetterIndent;
+                                leftBound = rightBound - scrollingTextWidth - scrollAmountBoundary - startLetterIndent;
+                            }
+                        });
+                    })
+                }
+            });
+        </script>
+    </div> -->
+
+    <!-- 地圖 -->
+    <div class="container" style="margin-bottom: 50px; margin-top: 80px;">
+
+
+        <!-- <div style="text-align: center;padding-left: 22.5%;padding-top: 30px; ">
+
+            <div
+                style=" height: 5px; width: 70%;background-color: rgb(255, 126, 61); border-color:5px solid rgb(255, 143, 58);">
+            
+                現在就加入我們的健身房會員，
+                享受健身的樂趣和好處，
+                還能夠獲得額外的獎勵。開啟這個充滿動力和成就感的健身之旅，我們期待與你一同成長!
+            </div>
+
+
+        </div> -->
+
+        <!-- <div style="text-align: center;margin: 30px;"><img style="height: 200px;width: 55%;object-fit:cover;"
+                src="../img/home/home (4).jpg"> </div> -->
+
+        <div class=" row justify-content">
+            <div class=" col-md-4">
+                <fieldset class="orderBox " style="text-align: center;">
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d195248.8701158562!2d121.27135486540583!3d23.718232984868596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1676874357231!5m2!1szh-TW!2stw"
+                        width="200" height="115" style="border: radius 12px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    <img class="map" style="height: 100px;width: 200px;object-fit: cover;"
+                        src="../img/gym_environment/setting_3.jpg">
+                    <br><br>
+                    <label>■ 北部地區
+
+                        台北旗艦店 </label><br><br>
+
+                    <label>營業時間：8:00-23:00</label>
+                    <br>
+                    <label>聯絡電話：02-6602-8899</label>
+                    <br>
+                    <label>E-mail : two159@gmail.com</label>
+                    <br><br>
+                    <label>地址：台北市松山區民權東路三段170號1樓<br>
+                        (附設免費貴賓停車位)</label>
+                </fieldset>
+            </div>
+            <div class=" col-md-4">
+                <fieldset class="orderBox " style="text-align: center;">
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d175137.3501365562!2d121.27135486540583!3d23.718232984868596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1676874357231!5m2!1szh-TW!2stw"
+                        width="200" height="115" style="border: radius 12px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+                    <img style="height: 100px;width: 200px; object-fit: cover;"
+                        src="../img/gym_environment/setting_7.jpg">
+                    <br><br>
+                    <label>■ 中部地區
+
+                        台中文心店 </label><br><br>
+
+                    <label>營業時間：8:00-23:00</label>
+                    <br>
+                    <label>聯絡電話：04-2315-7588</label>
+                    <br>
+                    <label>E-mail : two159@gmail.com</label>
+                    <br><br>
+                    <label>地址：台中市西屯路文心路三段100-3號<br>
+                        (附設免費貴賓停車位)</label>
+                </fieldset>
+            </div>
+            <div class=" col-md-4">
+                <fieldset class="orderBox " style="text-align: center;">
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d175137.3501365562!2d121.27135486540583!3d23.718232984868596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1676874357231!5m2!1szh-TW!2stw"
+                        width="200" height="115" style="border: radius 12px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    <img style="height: 100px;width: 200px; object-fit: cover;"
+                        src="../img/gym_environment/setting_4.jpg">
+
+                    <br><br>
+                    <label>■ 南部地區 高雄草衙道SKM Park Outlets 2F</label><br><br>
+                    <label>營業時間：8:00-23:00</label>
+                    <br>
+                    <label>聯絡電話：07-791-3218</label>
+                    <br>
+                    <label>E-mail : two159@gmail.com</label>
+                    <br><br>
+                    <label>地址：高雄市前鎮區中安路1-1號（大道東2F）<br> (附設免費貴賓停車位)</label>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <div class="b-example-divider"></div>
+    <footer>
+        <div class="d-flex justify-content-center border-bottom p-3">
+            <div>
+                <a href="" class="footer-link px-2">人才招募</a>
+                <a href="" class="footer-link px-2 ">最新消息</a>
+                <a href="" class="footer-link px-2">常見問題</a>
+            </div>
+            <div>
+                <a href="" class="footer-icon px-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                </a>
+                <a href="" class="footer-icon px-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                </a>
+                <a href="" class="footer-icon px-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <p class="text-center text-muted px-2">&copy; 2022 Company, Inc</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+</body>
+
+<script>
+    // 增肌增力
+    const startButton = document.getElementById('pointAButton');
+    const hexElement = document.getElementById('LineA');
+    let animationRunning = false;
+
+    startButton.addEventListener('click', toggleAnimation);
+
+    function toggleAnimation() {
+        if (!animationRunning) {
+            hexElement.classList.add('animateLine'); //animate啟動動畫
+            animationRunning = true;
+        } else {
+            hexElement.classList.remove('animateLine'); //移除暂停動畫
+
+
+            hexElement.style.strokeDashoffset = '1000px'; //重置到起始
+
+            // setTimeout 重新執行
+            setTimeout(() => {
+                hexElement.classList.add('animateLine'); //重新啟動動畫
+                animationRunning = true;
+            }, 0);
+        }
+    }
+    // 塑形減脂
+    const startCButton = document.getElementById('pointCButton');
+    const hexElementC = document.getElementById('LineC');
+    let animationRunningC = false;
+    startCButton.addEventListener('click', toggleAnimationC);
+
+    function toggleAnimationC() {
+        if (!animationRunningC) {
+            hexElementC.classList.add('animateLine');
+            animationRunningC = true;
+        } else {
+            hexElementC.classList.remove('animateLine');
+
+
+            hexElementC.style.strokeDashoffsetC = '1000px';
+
+
+            setTimeout(() => {
+                hexElementC.classList.add('animateLine');
+            }, 0);
+        }
+    }
+
+    // 身心紓壓 
+    const startBButton = document.getElementById('pointBButton');
+    const hexElementB = document.getElementById('LineB');
+    let animationRunningB = false;
+
+    startBButton.addEventListener('click', toggleAnimationB);
+
+    function toggleAnimationB() {
+        if (!animationRunningB) {
+            hexElementB.classList.add('animateLine');
+            animationRunningB = true;
+        } else {
+            hexElementB.classList.remove('animateLine');
+
+
+            hexElementB.style.strokeDashoffset = '1000px';
+
+
+            setTimeout(() => {
+                hexElementB.classList.add('animateLine');
+            }, 0);
+        }
+    }
+</script>
+
+
+</html>

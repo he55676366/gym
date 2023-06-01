@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員頁面</title>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h3>先try<%= name %></h3> -->
+    <h1>會員資料</h1>
+    <p>會員姓名:<%= name %></p>
+    <hr>
+    <p>電話:<%= phone %></p>
+    <hr>
+    <p>E-mail:<%= email %></p>
+    <hr>
+    <p>生日:<%= birth %></p>
+    <hr>
+    <p>地址:<%= adress %></p>
+    <hr>
+    <img src=<%= avatar%> alt="出不來">
+    <form action= "/upload_file/<%= id %>"  method="post" enctype="multipart/form-data">
+        <input type="file" name="myfile" accept="image/*">
+        <input type="submit" value="上傳檔案">
+    </form>
+    <hr>
+
+    <a href="/">回首頁</a>
+
+    <script>
+        var a =("<%= phone %>");
+        console.log(a);
+    </script>
+
+</body>
+</html>

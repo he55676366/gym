@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們</title>
+
+    <!-- navbar -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-fixed/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+
+
+    <link href="../css/about.css" rel="stylesheet" type="text/css">
+    <link href="./navbar.css" rel="stylesheet">
+
+    <style>
+        body {
+            min-height: 75rem;
+            padding-top: 4.5rem;
+            background-color: #003B64;
+            font-family: "Taipei Sans";
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="material-symbols-outlined" style="font-size: 38px;color:black">exercise</i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color:gray"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <!-- <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Home</a>
+  </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">最新消息</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">關於我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">課程與設備</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">會員專區</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">商城</a>
+                    </li>
+                </ul>
+                <div class="d-flex" role="search">
+                    <i class="material-symbols-outlined" style="font-size: 36px;">person</i>
+                    <i id="mode" class="material-symbols-outlined" style="font-size: 33px;">dark_mode</i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('mode').addEventListener('click', function () {
+            document.body.classList.toggle("dark");
+            document.getElementById("nav").classList.toggle("dark");
+            document.getElementById("mode").classList.toggle("icon");
+
+        })  
+    </script>
+
+
+
+    <!-- up -->
+    <a class="up" href="#"><i class="bi bi-chevron-up"></i></a>
+
+    <!-- 首圖 -->
+    <div style="text-align: left; overflow: hidden;">
+        <img src="../img/head/head_about.jpg"
+            style="object-fit:none ;text-align: left; width: 100%; height: 300px; border-radius: 0 300px 0 0; display: inline-block;">
+    </div>
+
+    <div class="container">
+
+
+        <!-- 企業介紹 -->
+        <div class="container" style="margin: 0px  0; text-align: center;
+        ">
+            <div class="c">
+                Vitality Gym 健身房 品牌故事</div>
+
+            <!-- 名人介紹 -->
+
+        </div>
+        <!-- 成立介紹 -->
+        <div style="text-align: center; height: 460px; background-color: #ffffff;
+                border-bottom: #fdb58c 10px solid;border-radius:12px;">
+
+            <pre>
+
+
+Vitality Gym 健身房企業成立於2012年，現在已經擁有三間分店，
+為超過3000名會員提供了優質的健身和運動體驗。
+這家健身房企業的宗旨是為客戶提供全面的健身設施和個人化的健身計劃，
+以幫助他們實現健康和身材目標。
+
+健身房的設施非常完善，包括有氧設備、力量設備、自由重量區、瑜伽室、有氧舞蹈室等。所有設施都經過精心設計，以滿足不同的健身需求。
+此外，健身房還提供了專業的健身培訓師，他們會根據客戶的目標和需求制定個人化的健身計劃和營養建議，幫助客戶更好地達到健康和身材目標。
+
+健身房企業還有一個非常活躍的社區，通過在社交媒體上分享健身知識和資訊，建立會員之間的互動和交流。
+這個社區還會不定期地舉辦各種活動，例如健身比賽、健身派對等，讓會員在健身的同時，也能感受到社交的樂趣。
+
+總之，這家健身房企業為會員提供了全面的健身體驗，包括設施、教練、課程和社區。
+通過這些優質的服務，這家健身房企業已經贏得了超過3000名忠實的會員，並且不斷擴大其業務規模。</pre>
+            <!-- <img style="height: 100px;" src="../img/logo/Vitality Gym Logo_5.jpg"> -->
+            <img style="height: 100px;" src="../img/logo/Vitality Gym Logo2_2_工作區域 1.png">
+        </div>
+
+        <!--時間軸-->
+        <style>
+            .timebody {
+                background-color: #f0595900;
+                min-height: 100vh;
+                margin: 0;
+
+                /* &:before {
+                        content: '';
+                        position: fixed;
+                        top: 0px;
+                        left: 50%;
+                        bottom: 0px;
+                        transform: translateX(-50%);
+                        width: 4px;
+                        height: 500px;
+                        background-color: #fff; */
+            }
+
+            .entries {
+                width: calc(100% - 80px);
+                max-width: 800px;
+                margin: auto;
+                position: relative;
+                left: -5px;
+
+                .entry {
+                    width: calc(50% - 80px);
+                    float: left;
+                    padding: 20px;
+                    clear: both;
+                    text-align: right;
+
+                    &:not(:first-child) {
+                        margin-top: -60px;
+                    }
+
+                    .title {
+                        font-size: 32px;
+                        margin-bottom: 12px;
+                        position: relative;
+                        color: #fdb58c;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 8px;
+                            height: 8px;
+                            border: 4px solid #ffffff;
+                            background-color: #fdb58c;
+                            border-radius: 100%;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: -73px;
+                            z-index: 1000;
+                        }
+
+                        &.big:before {
+                            width: 24px;
+                            height: 24px;
+                            transform: translate(8px, -50%);
+                        }
+                    }
+
+                    .body {
+                        color: #aaa;
+
+                        /* p {
+                                    line-height: 1.4rem;
+                                } */
+                    }
+
+                    &:nth-child(2n) {
+                        text-align: left;
+                        float: right;
+
+                        .title {
+                            &:before {
+                                left: -63px;
+                            }
+
+                            &.big:before {
+                                transform: translate(-8px, -50%);
+                            }
+                        }
+                    }
+                }
+            }
+        </style>
+        <div class=" timebody" style="padding-top: 30px;">
+            <!-- 直線 -->
+            <div style="position: absolute;
+                        top: 1030px;
+                        left: 50%;
+                        bottom: 0px;
+                        transform: translateX(-50%);
+                        width: 4px;
+                        height: 800px;
+                        background-color: #ffffff;">
+
+            </div>
+            <div class="entries ">
+                <div class="entry">
+                    <div class="title">2012 成立</div>
+                    <div class="body">
+                        <p>這家健身房企業成立於2012年，現在已經擁有三間分店，
+                            為超過3000名會員提供了優質的健身和運動體驗。
+                            這家健身房企業的宗旨是為客戶提供全面的健身設施和個人化的健身計劃，
+                            以幫助他們實現健康和身材目標。</p>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="title">2015 第一家分店</div>
+                    <div class="body">
+                        <p>健身房的設施非常完善，包括有氧設備、力量設備、自由重量區、瑜伽室、有氧舞蹈室等。所有設施都經過精心設計，以滿足不同的健身需求。
+                            此外，健身房還提供了專業的健身培訓師，他們會根據客戶的目標和需求制定個人化的健身計劃和營養建議，幫助客戶更好地達到健康和身材目標。
+                        </p>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="title big">2018 企業聯盟</div>
+                    <div class="body">
+                        <p>此外，這家健身房企業還提供了多種健身課程，包括瑜伽、有氧舞蹈、普拉提等。
+                            這些課程都由專業的教練授課，他們會根據學員的能力和需求，制定適合的課程，讓學員在享受運動的樂趣的同時，也能有效地達到健身目標。
+                        </p>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="title">2020 跨域合作</div>
+                    <div class="body">
+                        <p>除此之外，這家健身房企業還有一個非常活躍的社區，通過在社交媒體上分享健身知識和資訊，建立會員之間的互動和交流。
+                            這個社區還會不定期地舉辦各種活動，例如健身比賽、健身派對等，讓會員在健身的同時，也能感受到社交的樂趣。
+                        </p>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="title">2023 會員達數千</div>
+                    <div class="body">
+                        <p>總之，這家健身房企業為會員提供了全面的健身體驗，包括設施、教練、課程和社區。
+                            通過這些優質的服務，這家健身房企業已經贏得了超過3000名忠實的會員，並且不斷擴大其業務規模。</p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+        <!-- <div class="container">
+            <section class="intro"></section>
+
+            <div class="meta">
+                <div class="meta__inner">
+                    <h3>專業</h3>
+                    <p>用跳脫框架的思維邏輯，不害怕嘗試新事物， 對改變和機會保持開放性思維。</p>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- 三大理念 -->
+        <div class="container" style="margin: 0px  0; text-align: center;
+        ">
+            <div class="c">
+                Vitality Gym 健身房 三大理念</div>
+
+        </div>
+        <div class=" container   ">
+            <div class=" row " style=" ">
+                <div class="col-md-4 d-flex justify-content-center cardh">
+                    <div class="card" style="width: 18rem; border: #ffffff;">
+
+                        <div class="card-body">
+                            <strong
+                                style="height: 50px; padding: 20px; background-color: #fdb58c;color: #ffffff;">專業</strong>
+                            <pre class="card-text">
+
+
+
+
+       用跳脫框架的思維邏輯，
+         不害怕嘗試新事物，
+    對改變和機會保持開放性思維。
+</pre>
+                        </div>
+                        <img style="height: 220px;object-fit: cover;" src="../img/home/home (2).JPG"
+                            class="card-img-top" alt="...">
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex justify-content-center cardh">
+                    <div class="card" style="width: 18rem; border: #ffffff;">
+
+                        <div class="card-body">
+                            <strong
+                                style="height: 50px; padding: 20px; background-color: #fdb58c;color: #ffffff;">細節</strong>
+                            <pre class="card-text">
+
+
+
+           所有的執行
+      都應該以願景為出發點，
+         你做的每件事情
+    都是為了讓客戶有更棒的體驗。
+
+
+</pre>
+                        </div>
+                        <img style="height: 220px;object-fit: cover;" src="../img/gym_environment/setting_4.jpg"
+                            class="card-img-top" alt="...">
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 d-flex justify-content-center cardh">
+                    <div class="card" style="width: 18rem; border: #ffffff;">
+
+                        <div class="card-body">
+                            <strong
+                                style="height: 50px; padding: 20px; background-color: #fdb58c;color: #ffffff;">責任</strong>
+                            <pre class="card-text">
+
+
+
+        理解，在每個情況下
+           清楚的分辨問題，
+             擔當責任，
+           為了團隊更好
+       願意當個解決問題的人。
+
+</pre>
+                        </div>
+                        <img style="height: 220px;object-fit: cover;" src="../img/home/home (4).JPG"
+                            class="card-img-top" alt="...">
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+        <!-- 分館介紹 -->
+        <div class="container" style="margin: 100px 0 0 0; text-align: center;
+        padding: 10px;">
+            <div class="c">
+                分館介紹</div>
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample" >
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #4e487100;color: #000000;">
+
+                        <div class="row  justify-content:center " style="background-color: #cc343400;
+                                    padding: 0 5%;border-left: #fdb68c solid 5px;">
+
+                            <div class="col-md"
+                                style="background-color: rgb(255, 255, 255);padding: 3% 0 3% 0;height: 200px;">
+                                <br>
+                                <legend>■ 北部地區
+
+                                    台北旗艦店 </legend><br><br>
+
+                                <label>營業時間：8:00-23:00</label>
+                                <br>
+                                <label>聯絡電話：02-6602-8899</label>
+                                <br>
+                                <label>E-mail : two159@gmail.com</label>
+                                <br><br>
+                                <label>地址：台北市松山區民權東路三段170號1樓
+                                    (附設免費貴賓停車位)</label>
+                                <br>
+                            </div>
+
+                            <div class="col-md-4 position-absolute bottom-3% end-0 "
+                                style="background-color:rgba(0, 255, 255, 0) ; ">
+
+                                <img style="height: 200px;width: 335px; object-fit:cover;border: #fdb68c 10px solid;"
+                                    src="../img/gym_environment/setting_6.jpg" />
+                            </div>
+
+                        </div>
+                    </button>
+
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+
+                    <div class="accordion-body">
+
+                        <div class="row  justify-content:center " style="background-color: #ca717100;
+                                    padding: 0 15% 30px 15%;">
+
+                            <div class="col-md-6" style="background-color: rgb(255, 255, 255);padding: 3%;">
+                                <img style="height: 200px;width: 300px; object-fit:cover;border: #fdb68c 10px solid;"
+                                    src="../img/home/home (1).JPG" />
+                            </div>
+
+                            <div class="col-md-6" style="background-color:rgb(255, 255, 255) ;">
+                                <pre>
+
+
+
+
+課程都由專業的教練授課，
+他們會根據學員的能力和需求，制定適合的課程，
+讓學員在享受運動的樂趣的同時，也能有效地達到健身目標。
+                                            </pre>
+
+                            </div>
+
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d175137.3501365562!2d121.27135486540583!3d23.718232984868596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1676874357231!5m2!1szh-TW!2stw"
+                                width="25%" height="120" style="border:0; background-color: #ffffff;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"
+                        style="background-color: #ffffff;color: #000000;">
+                        <div class="row  justify-content:center " style="background-color: #ba7f7f00;
+                                    padding: 0 5%;border-left: #fdb68c solid 5px;">
+
+                            <div class="col-md"
+                                style="background-color: rgb(255, 255, 255);padding: 3% 0 3% 0;height: 200px;">
+                                <br>
+                                <legend>■ 中部地區
+
+                                    台中文心店 </legend><br><br>
+
+                                <label>營業時間：8:00-23:00</label>
+                                <br>
+                                <label>聯絡電話：04-2315-7588</label>
+                                <br>
+                                <label>E-mail : two159@gmail.com</label>
+                                <br><br>
+                                <label>地址：台中市西屯路文心路三段100-3號
+                                    (附設免費貴賓停車位)</label>
+                                <br>
+                            </div>
+
+                            <div class="col-md-4 position-absolute bottom-3% end-0 "
+                                style="background-color:rgba(0, 255, 255, 0) ; ">
+
+                                <img style="height: 200px;width: 335px; object-fit:cover;border: #fdb68c 10px solid;"
+                                    src="../img/gym_environment/setting_1.jpg" />
+                            </div>
+
+                        </div>
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="row  justify-content:center " style="background-color: #ca717100;
+                                padding: 0 15% 30px 15%;">
+
+                            <div class="col-md-6" style="background-color: rgb(255, 255, 255);padding: 3%;">
+                                <img style="height: 200px;width: 300px; object-fit:cover;border: #fdb68c 10px solid;"
+                                    src="../img/home/home (2).JPG" />
+                            </div>
+
+                            <div class="col-md-6" style="background-color:rgb(255, 255, 255) ;">
+                                <pre>
+
+
+
+
+課程都由專業的教練授課，
+他們會根據學員的能力和需求，制定適合的課程，
+讓學員在享受運動的樂趣的同時，也能有效地達到健身目標。
+                                        </pre>
+
+                            </div>
+
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d175137.3501365562!2d121.27135486540583!3d23.718232984868596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1676874357231!5m2!1szh-TW!2stw"
+                                width="25%" height="120" style="border:0; background-color: #ffffff;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree" style="background-color: #ffffff;color: #000000;">
+                            <div class="row  justify-content:center " style="background-color: #ba7f7f00;
+                                    padding: 0 5%;border-left: #fdb68c solid 5px;">
+
+                                <div class="col-md"
+                                    style="background-color: rgb(255, 255, 255);padding: 3% 0 3% 0;height: 200px;">
+                                    <br>
+                                    <legend>■ 南部地區 高雄草衙道SKM Park Outlets 2F</legend><br><br>
+                                    <label>營業時間：8:00-23:00</label>
+                                    <br>
+                                    <label>聯絡電話：07-791-3218</label>
+                                    <br>
+                                    <label>E-mail : two159@gmail.com</label>
+                                    <br><br>
+                                    <label>地址：高雄市前鎮區中安路1-1號（大道東2F） (附設免費貴賓停車位)</label>
+                                    <br>
+                                </div>
+
+                                <div class="col-md-4 position-absolute bottom-3% end-0 "
+                                    style="background-color:rgba(0, 255, 255, 0) ; ">
+
+                                    <img style="height: 200px; object-fit:cover;border: #fdb68c 10px solid;"
+                                        src="../img/3.png" />
+                                </div>
+
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="row  justify-content:center " style="background-color: #ca717100;
+                                    padding: 0 15% 30px 15%;">
+
+                                <div class="col-md-6" style="background-color: rgb(255, 255, 255);padding: 3%;">
+                                    <img style="height: 200px;width: 300px; object-fit:cover;border: #fdb68c 10px solid;"
+                                        src="../img/5.png" />
+                                </div>
+
+                                <div class="col-md-6" style="background-color:rgb(255, 255, 255) ;">
+                                    <pre>
+
+
+
+
+課程都由專業的教練授課，
+他們會根據學員的能力和需求，制定適合的課程，
+讓學員在享受運動的樂趣的同時，也能有效地達到健身目標。
+                                            </pre>
+
+                                </div>
+
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d175137.3501365562!2d121.27135486540583!3d23.718231236548596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1676874357231!5m2!1szh-TW!2stw"
+                                    width="1%" height="120" style="border:0; background-color: #ffffff;"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 常見問題-->
+        <div class="container" style="margin: 100px 0 0 0; text-align: center;
+                     padding: 10px;">
+            <div class="c">
+                常見問題</div>
+        </div>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Q1. 請問方案及價格?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">我們分為兩種收費方式 (差別在於可以來上課的時間頻率)<br>
+
+                        1.堂數方案：<br>
+                        課程單堂最便宜只要70元／堂，滿額還送贈品！所有課程都可以上課，包括有氧舞蹈、瑜珈、拳擊有氧等等課程，堂數方案不限本人使用。
+                        <br>
+                        2.會員方案 【適合頻繁使用者】：<br>
+                        無綁約、不限課程、不限時段，運動課程瑜珈、曲線、拳擊有氧任您選擇！會員方案限本人使用。<br>
+
+                        <a style="color: #fdb68c;" href="">了解詳情</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Q2. 堂數過期怎麼辦？
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">過期堂數提供兩個選擇：
+                        <br>
+                        1. 補價差，票期1年（例：剩餘3格，每個40元，$40*3=$120）<br>
+                        2. 購新票免費延期（視您購買的堂數，效期優惠皆有不同）
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Q3. 堂數方案可跨館使用嗎？
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">可以唷！ </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                Q4. 平常沒運動習慣，怎麼選擇適合自己的課程？
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">可參考官網的課程介紹，<br>分別有：有氧 / 瑜珈 / 舞蹈<br>
+                                我們的課程有低衝擊有氧、混和衝擊有氧、高衝擊有氧和瑜珈，<br>可參考1~5顆星及難易度標記。</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 聯絡我們 -->
+        <div class="container">
+            <div class="container" style="margin: 30px  0; text-align: center;
+            padding: 100px;">
+                <div class="c">
+                    聯絡我們</div>
+
+                <div class="container "
+                    style="background-color: #ffffff; height: 600px;border-bottom: #ffe4c4 10px solid;">
+                    <div class=" row  align-items-center ">
+
+                        <form>
+                            <!-- action="提交" method="HTTP方法" -->
+                            <fieldset>
+                                <div style="margin:50px;">
+                                    <pre>
+我們希望聽到您的意見
+任何的問題、建議以及企業合作都歡迎告訴我們。
+請填寫以下表格，我們將會以最快的速度回應給您，謝謝。</pre>
+                                </div>
+                                <div class="container" style="padding: 0 15%;">
+
+                                    <div class="row">
+                                        <div class=" col-md-4"><input name="Name" type="text" id="userName"
+                                                placeholder="名稱*" required minlength="2" />
+                                        </div>
+                                        <div class=" col-md-8"><input type="tel" id="userPhone" placeholder="電話*"
+                                                oninvalid="setCustomValidity('請輸手機號碼')" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12"><input type="email" id="userEmail" name="email"
+                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="電子郵件*"
+                                            required />
+                                    </div>
+                                    <input class=" " type="text" id="usertext" style="height:150px" placeholder="留言*"
+                                        required />
+                                </div>
+                            </fieldset>
+                            <button type="submit" id="show" style="margin-top:10px ;height: 33px;width: 80px; background-color: #FDB68C;color: rgb(255, 255, 255); 
+                    font: size 22px ;border-radius: 12px;border: #ffffff00; ">送出</button>
+
+
+                            <dialog id="infoModal">
+                                <p>感謝您的回覆 ! </p>
+                                <button id="close" style="margin-top:10px ;height: 33px;width: 80px; background-color: #ff8855f0;color: rgb(255, 255, 255); 
+                                font: size 22px ;border-radius: 12px;border: #ffffff00; ">關閉</button>
+                            </dialog>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                let btn = document.querySelector("#show");
+                let infoModal = document.querySelector("#infoModal");
+                let close1 = document.querySelector("#close");
+                btn.addEventListener("click", function () {
+                    var x = userName.value;
+                    var y = userPhone.value;
+                    var z = userEmail.value;
+                    var n = usertext.value;
+                    console.log(x);
+                    if (x && y && z && n) {
+                        infoModal.showModal();
+                    }
+                })
+                close1.addEventListener("click", function () {
+                    infoModal.close();
+                    // window.location.href = "#";
+                })
+            </script>
+
+
+
+
+        </div>
+
+
+
+    </div>
+    <!-- footer -->
+    <div class="b-example-divider"></div>
+    <footer>
+        <div class="d-flex justify-content-center border-bottom p-3">
+            <div>
+                <a href="" class="footer-link px-2">人才招募</a>
+                <a href="" class="footer-link px-2 ">最新消息</a>
+                <a href="" class="footer-link px-2">常見問題</a>
+            </div>
+            <div>
+                <a href="" class="footer-icon px-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                </a>
+                <a href="" class="footer-icon px-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                </a>
+                <a href="" class="footer-icon px-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <p class="text-center text-muted px-2">&copy; 2022 Company, Inc</p>
+    </footer>
+
+
+</body>
+
+</html>

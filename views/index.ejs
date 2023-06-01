@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+
+    <!-- bs -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../css/navbar.css">
+
+      <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="../js/jQuery-3.6.3.min.js"></script>
+    
+    <script src="../js/home.js"></script>
+    <link href="../css/home.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <style>
+        body {
+        min-height: 75rem;
+        padding-top: 4.5rem;
+        background-color: #003B64;
+        font-family: "Taipei Sans";
+    }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="appendnav"></div> 
+    <!-- up -->
+    <a class="up" href="#"><i class="bi bi-chevron-up"></i></i></a>
+
+    <!-- 小訊息 -->
+    <!-- 免費體驗F -->
+    <div class="float1" style="z-index: 5 ; float: right;
+    position: absolute;
+    top: 100px;
+    left: 70%;">
+        <div class="animate__animated  animate__bounceInRight" style="position: absolute ;left: 70%;top: 350px; height: 400px;width: 300px;
+                border:solid 8px rgb(255, 255, 255);border-radius: 10px; background-color: #ff8855f0; ">
+            <h2 style="margin: 15px;color: #ffffff;"><strong>免費體驗</strong></h2>
+            <p style="margin: 15px;color: #ffffff;">我們需要淘汰舊有的觀念，做好體眼這件事，
+                可以說已經成為了全民運動。</p>
+            <br><br>
+            <div style="position:absolute;left: 40%;top: 320px;">
+                <div  style="border:0  ;background-color:none">
+                    <img style="height: 45px;" id="show" src="../img/index/10.png"></div>
+            </div>
+        </div>
+        <dialog id="infoModal" style="border-color: #fdb68c; border-radius: 12px;">
+            <form>
+                <div class="form-group">
+                    <input name="Name" type="text" class="form-control" placeholder="姓名" required="required" minlength="2" />
+                </div>
+                <div class="form-group">
+                    <input name="Tel" class="form-control" type="text" placeholder="手機號碼" required="required"
+                        maxlength="10" pattern="09\d{8}" oninput="setCustomValidity('');"
+                        oninvalid="setCustomValidity('請輸入手機號碼')" />
+                </div>
+            </form>
+            <p style="padding:0 10px;" >感謝填寫，將有專人與您聯絡!</p>
+
+            <button id="close" style="margin-top:10px;height: 33px;width: 80px; background-color: #ff8855f0;color: rgb(255, 255, 255); 
+            font: size 22px ;border-radius: 12px;border: #ffffff00;">關閉</button>
+        </dialog>
+        <script>
+            let btn = document.querySelector("#show");
+            let infoModal = document.querySelector("#infoModal");
+            let close = document.querySelector("#close");
+            btn.addEventListener("click", function () {
+                infoModal.showModal();
+            })
+            close.addEventListener("click", function () {
+                infoModal.close();
+            })
+        </script>
+    </div>
+
+   <!-- 首圖 -->
+   <div
+   style=" position: absolute; top: 270px;border-radius: 0  750px 0 0;background-color: rgba(255, 255, 255, 0.304); ">
+   <img class="animate__animated  animate__fadeInLeft" style="height: 200px;width: 90%; margin-left: 11%;
+   filter: drop-shadow(-8px 15px 15px rgb(0, 0, 0));  " src=".././img/logo/Vitality Gym Logo_white_png_4.png">
+</div>
+
+
+<div style="height: 400px;width: 90%;margin-left: 10%;
+ background-color: #fdb68c;border-radius:  300px 0 0 12px;
+ box-shadow: -1px 3px 5px rgb(46, 50, 77);
+background-image: url(../img/index/home_7.JPG);">
+
+   <img style="margin-left: 10%; object-fit: cover; height: 300px; width: 90%; 
+   background-color: #fdb68c; border-radius: 250px 0 0 0; 
+   box-shadow: -2px 10px 15px rgb(255, 255, 255);" src="../img/index/77.jpg" alt="Image">
+
+
+</div>
+
+
+   <!-- 左右 -->
+   <div class="container" style="margin-top:50px ;">
+
+    <div class=" row " style="background-color: rgba(0, 255, 255, 0); ">
+
+        <!-- 會員方案 -->
+        <!-- 現在加入 -->
+        <div class="col-md-7" style="height:400px ; background-color: rgba(255, 208, 161, 0);">
+            <div>
+                <swiper-container class="mySwiper sw" direction="vertical" pagination="true"
+                    pagination-clickable="true" style="height: 400px;width: 100%;">
+
+                    <swiper-slide><img style=" object-fit:cover;  "
+                            src="../img/index/5240.png"></swiper-slide>
+                    <swiper-slide><img style=" object-fit:cover;  "
+                            src="../img/2_202304301513203f6m6hcoB3.jpg"></swiper-slide>
+
+
+                </swiper-container>
+
+                <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+            </div>
+
+        </div>
+        <!-- 右圖 -->
+
+        <div class=" col-md-5 "
+            style=" z-index: 3;  height:450px;width: 490px; background-color: rgba(248, 255, 154, 0); ">
+            <div class="text-center" >
+                <img style=" display: block;
+                position: absolute; border-radius: 200px; object-fit:cover ;height: 700px;width: 400px;"
+                    src="../img/index/11.jpg">
+                
+
+            </div>
+
+
+            <div style="z-index: 2; position: absolute; top: 1125px ;
+            left: 67%;background-color: rgba(255, 255, 255, 0); ">
+                <img style="border-radius:200px 200px 0 0; object-fit:cover ;height: 500px;width: 400px;" src="../img/index/setting_5.jpg">
+            </div>
+
+            <!-- <div
+                style=" position: absolute; top: 1400px ;left: 67%;border-radius: 0  750px  0;background-color: rgba(255, 255, 255, 0.32); ">
+                <img class="animate__animated  animate__fadeInLeft" style="height: 100px;width: 100%; margin-left: 11%;
+    filter: drop-shadow(0 20px 15px rgb(0, 0, 0));  " src=".././img/logo/Vitality Gym Logo V6_工作區域 2_工作區域 1_工作區域 1_工作區域 1_工作區域 1.png">
+            </div> -->
+
+        </div>
+
+    </div>
+
+
+    <!--連連看-->
+    <div style="height: 600px; 
+     background-color: rgba(255, 198, 198, 0);border-radius: 0px 0px 1050px 0;
+    color: #ffffff;  position: relative;background-image:url(../)">
+
+        <div style="border: #ffeab600 2px ;">
+            <p class=" demotext " style="margin-left: 21%;" ><strong>您想要?</strong></p>
+        </div>
+
+
+        <div>
+            <svg viewBox="0 0 80 150">
+                <polygon id="LineA" class="circleLine" points="
+            10 8,
+       
+            19 26" />
+                <polygon id="LineC" class="circleLine" points="
+            20 14,
+            
+            8 20,
+            " />
+                <polygon id="LineB" class="circleLine" points="
+            32 5,
+            32.5 21" />
+            </svg>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-3" style="
+        top: 90px;z-index: 3; text-align: center; 
+        position: absolute;  background-color: #63ae9200;">
+                <button id="pointAButton" class="test " style="position: relative;">
+                    <img height="150px" src="../img/index/bu1.png" alt="" style="display: block; margin: 0 auto;">
+                    <span class="buttonText" style="color: #ffffff;">
+                        <img src="../img/index/wght40.png"><br>增肌增力
+                    </span>
+                </button>
+            </div>
+
+
+            <div class="col-md-10 " style="
+        top: 90px;
+        z-index: 2;position: absolute;
+        text-align: center; background-color: rgba(250, 255, 222, 0);">
+                <button id="pointBButton" class="test" style="position: relative;">
+                    <img height="135px" src="../img/index/bu3.png" alt="" style="display: block; margin: 0 auto;">
+                    <span class="buttonText"style="color: #ffffff;">
+                        <img src="../img/index/wght400.png"> <br>身心紓壓
+                    </span>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="row col-md-7" style="
+        top: 200px;z-index: 4; position: absolute; background-color: rgba(136, 255, 132, 0);">
+            <div style="text-align: center;background-color: rgba(255, 232, 150, 0);">
+                <button id="pointCButton" class="test" style="position: relative;">
+                    <img height="170px" src="../img/index/bu2.png" alt="" style="display: block; margin: 0 auto;">
+                    <span class="buttonText"style="color: #ffffff;">
+                       <img src="../img/index/wght4.png"> <br>塑形減脂
+                    </span>
+                </button>
+            </div>
+        </div>
+        <!-- 答 -->
+
+        <div class="row">
+            <div class="col-md-2" style="
+        top: 390px; z-index: 6; position: absolute; text-align: center; background-color: rgba(255, 147, 221, 0);">
+                <button id="pointAans" class="test" style="position: relative;">
+                    <img height="100px" src="../img/index/bu.png" alt="" style="display: block; margin: 0 auto;">
+                    <span class="buttonText">
+                        有氧
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10" style="
+        top: 410px;z-index: 5; position: absolute; text-align: center; background-color: rgba(99, 174, 146, 0);">
+                <button id="pointBans" class="test" style="position: relative;">
+                    <img height="100px" src="../img/index/bu.png" alt="" style="display: block; margin: 0 auto;">
+                    <span class="buttonText">
+                        瑜珈
+                    </span>
+                </button>
+            </div>
+            <div class="col-md-6" style="
+    top: 480px;z-index: 7;  position: absolute;text-align: center; background-color: rgba(174, 99, 115, 0);">
+                <button id="pointCans" class="test" style="position: relative;">
+                    <img height="100px" src="../img/index/bu.png" alt="" style="display: block; margin: 0 auto;">
+                    <span class="buttonText">
+                        重訓
+                    </span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+    <!-- 介紹 -->
+    <!-- 大區塊 -->
+    <div class=" row" style=" background-color: #ffe6d2e9;border-radius:   750px 0  750px;margin: 30px 0; padding: 5%;">
+        <div class="d-flex justify-content-center">
+            <p style=" background-color: rgba(127, 149, 95, 0);color: black;font-size: 48px;"><strong>
+                    Vitality Gym 健身房</strong></p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p style="background-color: rgba(255, 216, 208, 0);color: black;font-size: 48px;"><strong>
+                    致力於為您提供最佳的健身體驗</strong></p>
+        </div>
+
+        <div class="container d-flex justify-content-center" style="padding: 0 100px; ">
+
+            <p class="promtext" style="padding: 10px;">
+                <i class="bi bi-hexagon-fill" style="color: #ff5e42;"></i> 專業教練團隊
+                <i class="bi bi-hexagon" style="color: #ff5e42;"></i> 個人化指導
+                <i class="bi bi-hexagon-fill" style="color: #ff5e42;"></i> 多樣化的課程選擇
+                <i class="bi bi-hexagon" style="color: #ff5e42;"></i> 輕鬆預約流程
+                <i class="bi bi-hexagon-fill" style="color: #ff5e42;"></i> 會員積分換好禮
+                <i class="bi bi-hexagon" style="color: #ff5e42;"></i>
+            </p>
+
+        </div>
+
+
+
+        <!-- 1 師資-->
+        <div class="col-md-6 mx-auto" style="background-color: #a9548b00; padding-top: 30px;">
+            <div onclick="showLeftSlide()" style="justify-content: center;">
+
+                <div class=" popuptext contentText" id="popup_text_left">
+                    <pre>
+專業知識和經驗：
+我們的教練團隊都是經驗豐富且專業的健身教練，
+他們將引導和協助您在健身旅程中取得最佳效果。
+您可以在教練個人資訊中了解更多。
+
+個人化指導：
+我們的教練團隊重視每位會員的個人需求和目標。
+他們將根據您的興趣和身體狀況提供訓練計劃。
+</pre>
+                    <button class="col-md-12 text-md-end" style="background-color: #ffffff00;"><i
+                            class="bi bi-chevron-right" style="color: #ffffff;"></i></button>
+
+                </div>
+
+                <div class=" imagecon" style=" position: relative;
+                        display: inline-block ">
+
+                    <img class="intervborder" src="../img/index/home (1).JPG">
+
+                    <span class="intertext">
+                        師資
+                    </span>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 2 課程-->
+        <div class="row " style="margin-top: 20px;">
+            <div class="col-md-6  mx-auto" style="background-color: rgba(185, 222, 199, 0);">
+                <div class="col-md-12 text-md-end" style="background-color: #b7238300;">
+                    <div onclick="showRightSlide()">
+                        <div class="popuptext contentText text-md-start" id="popup_text_right">
+                            <pre>
+多樣化的課程選擇：
+我們提供各種類型的課程，
+無論您是喜歡有氧運動、重力訓練還是瑜伽，
+我們都有適合您的選項。
+您可以透過我們精簡的課程總覽輕鬆找到合適的課程。
+                            </pre>
+                            <button class="col-md-12 text-md-end" style="background-color: #ffffff00;"><i
+                                    class="bi bi-chevron-right" style="color: #ffffff;"></i></button>
+
+                        </div>
+                        <div class="imagecon" style="position: relative; display: inline-block ; ">
+
+                            <img class="intervborder" src="../img/index/home (2).JPG">
+
+                            <span class="intertext">課程</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 3 預約-->
+        <div class="col-md-6 mx-auto" style="margin-top: 20px; background-color: #b7238300;">
+            <div onclick="showLeftSlide2()">
+
+                <div class=" popuptext contentText" id="popup_text_Left2">
+                    <div>
+                        <pre>課程預約：
+線上查看各式各樣的課程，
+包括團體課程、個人教練和個人使用空間。
+您可以根據自己的需求和興趣預約您感興趣的課程。
+
+個人化設定和歷史紀錄：
+您可以透過個人資訊頁面查看您的預約情況、
+取消預約以及瀏覽過去參加的課程歷史。</pre> <button class="col-md-12 text-md-end" style="background-color: #ffffff00;"><i
+                                class="bi bi-chevron-right" style="color: #ffffff;"></i></button>
+
+                    </div>
+
+                </div>
+
+                <div class=" imagecon" style=" position: relative;
+                display: inline-block ">
+
+                    <img class="intervborder" src="../img/index/home (3).JPG">
+
+                    <span class="intertext">預約
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- 4 會員-->
+        <div class="row " style="margin-top: 20px;">
+            <div class="col-md-6 mx-auto " style="background-color: rgba(185, 222, 199, 0);">
+                <div class="col-md-12 text-md-end" style="background-color: #b7238300;">
+                    <div onclick="showRightSlide2()">
+                        <div class="popuptext contentText text-md-start " id="popup_text_Right2">
+
+                            <pre>
+積分獎勵：
+每次在健身房運動、參加課程或購買產品時，
+將獲得積分獎勵。
+
+多樣化的換禮品選項：
+我們精心挑選了各種高品質的運動器材、
+時尚的健身服飾、營養補充品、私人教練課程、
+健身活動門票等。</pre><button class="col-md-12 text-md-end" style="background-color: #ffffff00;"><i class="bi bi-chevron-right"
+                                    style="color: #ffffff;"></i></button>
+                        </div>
+
+
+                        <div class="imagecon" style="position: relative; display: inline-block ; ">
+
+                            <img class="intervborder" src="../img/index/home (6).JPG">
+
+                            <span class="intertext">會員</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 地圖 -->
+    <div class="container" style="margin-bottom: 50px; margin-top: 80px;">
+
+        <div class=" row justify-content">
+            <div class=" col-md-4">
+                <fieldset class="orderBox " style="text-align: center;">
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d195248.8701158562!2d121.27135486540583!3d23.718232984868596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1676874357231!5m2!1szh-TW!2stw"
+                        width="200" height="115" style="border: radius 12px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    <img class="map" style="height: 100px;width: 200px;object-fit: cover;"
+                        src="../img/member/setting_3.jpg">
+                    <br><br>
+                    <label>■ 北部地區
+
+                        台北旗艦店 </label><br><br>
+
+                    <label>營業時間：8:00-23:00</label>
+                    <br>
+                    <label>聯絡電話：02-6602-8899</label>
+                    <br>
+                    <label>E-mail : two159@gmail.com</label>
+                    <br><br>
+                    <label>地址：台北市松山區民權東路三段170號1樓<br>
+                        (附設免費貴賓停車位)</label>
+                </fieldset>
+            </div>
+            <div class=" col-md-4">
+                <fieldset class="orderBox " style="text-align: center;">
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d175137.3501365562!2d121.27135486540583!3d23.718232984868596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1676874357231!5m2!1szh-TW!2stw"
+                        width="200" height="115" style="border: radius 12px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+                    <img style="height: 100px;width: 200px; object-fit: cover;"
+                        src="../img/member/setting_7.jpg">
+                    <br><br>
+                    <label>■ 中部地區
+
+                        台中文心店 </label><br><br>
+
+                    <label>營業時間：8:00-23:00</label>
+                    <br>
+                    <label>聯絡電話：04-2315-7588</label>
+                    <br>
+                    <label>E-mail : two159@gmail.com</label>
+                    <br><br>
+                    <label>地址：台中市西屯路文心路三段100-3號<br>
+                        (附設免費貴賓停車位)</label>
+                </fieldset>
+            </div>
+            <div class=" col-md-4">
+                <fieldset class="orderBox " style="text-align: center;">
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d175137.3501365562!2d121.27135486540583!3d23.718232984868596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1676874357231!5m2!1szh-TW!2stw"
+                        width="200" height="115" style="border: radius 12px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    <img style="height: 100px;width: 200px; object-fit: cover;"
+                        src="../img/member/setting_4.jpg">
+
+                    <br><br>
+                    <label>■ 南部地區 高雄草衙道SKM Park Outlets 2F</label><br><br>
+                    <label>營業時間：8:00-23:00</label>
+                    <br>
+                    <label>聯絡電話：07-791-3218</label>
+                    <br>
+                    <label>E-mail : two159@gmail.com</label>
+                    <br><br>
+                    <label>地址：高雄市前鎮區中安路1-1號（大道東2F）<br> (附設免費貴賓停車位)</label>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script>
+        var token ="<%= token%>";
+        var user_name =<%- JSON.stringify(user_name) %>;
+    </script>
+    <script src="../js/appendnav.js"></script>
+    <script src="../js/appendfooter.js"></script>
+    <script>
+            // 增肌增力
+    const startButton = document.getElementById('pointAButton');
+    const hexElement = document.getElementById('LineA');
+    let animationRunning = false; // 动画是否正在运行的标志
+
+    startButton.addEventListener('click', toggleAnimation);
+
+    function toggleAnimation() {
+        if (!animationRunning) {
+            hexElement.classList.add('animateLine'); // 添加animate类以启动动画
+            animationRunning = true;
+        } else {
+            hexElement.classList.remove('animateLine'); // 移除animate类以暂停动画
+
+
+            hexElement.style.strokeDashoffset = '1000px'; // 将动画重置到起始状态
+
+            // 使用setTimeout在下一帧重新执行动画
+            setTimeout(() => {
+                hexElement.classList.add('animateLine'); // 添加animate类以重新启动动画
+            }, 0);
+        }
+    }
+    // 塑形減脂
+    const startCButton = document.getElementById('pointCButton');
+    const hexElementC = document.getElementById('LineC');
+    let animationRunningC = false; // 动画是否正在运行的标志
+
+    startCButton.addEventListener('click', toggleAnimationC);
+
+    function toggleAnimationC() {
+        if (!animationRunningC) {
+            hexElementC.classList.add('animateLine'); // 添加animate类以启动动画
+            animationRunningC = true;
+        } else {
+            hexElementC.classList.remove('animateLine'); // 移除animate类以暂停动画
+
+
+            hexElementC.style.strokeDashoffsetC = '1000px'; // 将动画重置到起始状态
+
+            // 使用setTimeout在下一帧重新执行动画
+            setTimeout(() => {
+                hexElementC.classList.add('animateLine'); // 添加animate类以重新启动动画
+            }, 0);
+        }
+    }
+
+    // 身心紓壓 
+    const startBButton = document.getElementById('pointBButton');
+    const hexElementB = document.getElementById('LineB');
+    let animationRunningB = false; // 动画是否正在运行的标志
+
+    startBButton.addEventListener('click', toggleAnimationB);
+
+    function toggleAnimationB() {
+        if (!animationRunningB) {
+            hexElementB.classList.add('animateLine'); // 添加animate类以启动动画
+            animationRunningB = true;
+        } else {
+            hexElementB.classList.remove('animateLine'); // 移除animate类以暂停动画
+
+
+            hexElementB.style.strokeDashoffset = '1000px'; // 将动画重置到起始状态
+
+            // 使用setTimeout在下一帧重新执行动画
+            setTimeout(() => {
+                hexElementB.classList.add('animateLine'); // 添加animate类以重新启动动画
+            }, 0);
+        }
+    }
+    
+    </script>
+
+
+
+</body>
+
+</html>

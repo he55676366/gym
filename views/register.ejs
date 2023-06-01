@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>會員註冊</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="../js/jQuery-3.6.3.min.js"></script>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        body {
+            /* align-items: center; */
+            background-color: #003B64;
+            font-family: "Taipei Sans";
+        }
+
+        .form-signin {
+        width: 450px;
+        align-items: center;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px; 
+        margin-top: 40px;
+        box-shadow: rgba(0, 0, 0, 0.15) 8.95px 8.95px 5.6px;
+        border-radius: 8px;
+
+        }
+
+        .modify_input {
+            width: 250px;
+            height: 30px;
+        }
+
+        .up_window {
+            padding: 20px;
+            border: 5px solid #EC9059;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .up_dialog {
+            margin: 0px 10px;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            /* width: 40%; */
+            /* border-radius: 50%; */
+            height: 200px;
+        }
+
+        .modal {
+            display: none;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            align-items: center;
+            align-self: center;
+            align-content: center;
+            text-align: center;
+            background-color: #fefefe;
+            border: none;
+            width: 60%;
+            height: 100%;
+        }
+
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .hidden-center {
+            position: absolute;
+        }
+
+        .okbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 8px 8px;
+            margin: 8px 8px;
+            border: none;
+            cursor: pointer;
+            width: auto;
+        }
+        .btn {
+        background-color: #fdb68c;
+        width: 100%;
+      }
+      .btn:hover {
+        background-color: #ec9059;
+        
+      }
+
+    </style>
+
+
+
+</head>
+
+<body class="text-center d-flex justify-content-center">
+
+    <main class="form-signin bg-white p-3">
+        <form id="reg">
+            <a href="./memberhome.html"><img src="../img/logo/Vitality Gym Logo2_工作區域 1.png" alt="" width="150"></a>
+            <h3 class="h3 m-3 fw-normal">會員註冊</h3>
+            <div class="mb-1 input-group">
+                <span class="input-group-text"><i class="bi bi-person-gear"></i>
+                </span><input type="text" class="form-control" name="abc" placeholder="帳號">
+            </div>
+            <div class="mb-1 input-group">
+                <span class="input-group-text"><i class="bi bi-key"></i>
+                </span><input type="password" class="form-control" name="password" placeholder="密碼">
+            </div>
+            <div class="mb-1 input-group">
+                <span class="input-group-text"><i class="bi bi-person"></i>
+                </span><input type="text" class="form-control" name="userName" placeholder="名字">
+            </div>
+            <div class="mb-1 input-group">
+                <span class="input-group-text"><i class="bi bi-envelope"></i>
+                </span><input type="email" class="form-control" name="email" placeholder="信箱">
+            </div>
+            <div class="mb-1 input-group">
+                <span class="input-group-text"><i class="bi bi-telephone"></i>
+                </span><input type="tel" class="form-control" name="phone" placeholder="手機">
+            </div>
+            <div class="mb-1 input-group">
+                <span class="input-group-text"><i class="bi bi-geo"></i>
+                </span><input type="text" class="form-control" name="address" placeholder="地址">
+            </div>
+            <div class="mb-1 input-group">
+                <span class="input-group-text"><i class="bi bi-calendar4"></i>
+                </span><input type="date" class="form-control" name="birth" min="1981-01-01" max="2005-12-31"
+                    placeholder="生日">
+            </div>
+            <div class="checkbox mb-3">
+                <button id="fine" class="btn btn-md" type="button">註冊</button>
+            </div>
+
+            <label><input type="checkbox" name="check"><span>&nbsp;已閱讀&nbsp;</span></label>
+            <a id="benefits_up" class="memberlogin_a" onclick="terms()">會員條款</a>
+
+        </form>
+    </main>
+
+
+
+    <!-- 使用者條款 -->
+    <div id="id02" class="modal">
+        <div class="d-flex hidden-center mt-2" id="t1">
+            <form class="animate" id="t2">
+                <div class="up_window text-center">
+                    <h4>會員條款說明</h4>
+                    <textarea cols="40" rows="15"
+                        readonly="readonly">加里寧說過一句很有意思的話，決不要把他們教育成悶悶不樂，過早就想變為成年的人。這句話語雖然很短，但令我浮想聯翩。這必定是個前衛大膽的想法。若發現問題比我們想像的還要深奧，那肯定不簡單。在這種困難的抉擇下，本人思來想去，寢食難安。我們都知道，只要有意義，那麼就必須慎重考慮。說苑在不經意間這樣說過，為地戰不能成王，為祿仕者不能成政。這不禁令我深思。巴爾扎克講過一段深奧的話，許多虛偽的人用粗暴來掩飾他們的平庸; 你碰撞他們一下吧，他們就像用別針著的氣球一樣，癟了。這句話讓我們得到了一個全新的觀點去思考這個問題。會員權益說明對我來說有著舉足輕重的地位，必須要嚴肅認真的看待。</textarea>
+                </div><br>
+                <div class="d-flex justify-content-center">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                        class="okbtn">確認</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="id04" class="modal">
+        <div class="d-flex hidden-center mt-2">
+            <div class="animate">
+                <div class="up_window text-center">
+                    <div class="imgcontainer">
+                        <img src="../img/logo/Vitality Gym Logo_3.png" alt="Avatar" class="avatar">
+                    </div>
+                    <p>註冊成功</p>
+                    <div class=" justify-content-center">
+                        <button type="submit" class="okbtn"
+                            onclick="document.getElementById('id04').style.display='none'" id="id04_ok">確認</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <button id="ttt">123</button> -->
+
+    <script>
+        var hidden_center = $('.hidden-center');
+
+        function terms() {
+            id02.style.display = "block";
+            window_resize();
+        }
+
+        function window_resize() {
+            hidden_center.each((i, v) => {
+                hidden_center.eq(i).css({ 'top': '50%', 'left': '50%' });
+                console.log(hidden_center.eq(i));
+                console.log(hidden_center.eq(i).offset());
+                var h = hidden_center.eq(i).height();
+                var w = hidden_center.eq(i).width();
+                var o = hidden_center.eq(i).offset();
+                hidden_center.eq(i).offset({
+                    top: `${o.top - h / 2}`,
+                    left: `${o.left - w / 2}`,
+                })
+            })
+        }
+
+        $(window).on("resize", function () {
+            window_resize();
+        });
+
+        $('#fine').click(function () {
+            var read_check = $("*[name='check']").prop("checked");
+            if (read_check) {
+                var toArray = $('#reg').serializeArray();
+                jsonArray = serializeToJSON(toArray);
+                $.ajax({
+                    url: "/add",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    data: jsonArray,
+                    success: function (res) {
+                        var res = JSON.parse(res);
+                        if (res.errno === 1) {
+                            id04.style.display = "block";
+                            window_resize();
+                            setTimeout(function () {
+                                location.href = '/index';
+                            }, 1000);
+                        } else if (res.errno === 0) {
+                            alert('註冊失敗');
+                        }
+                    },
+                    error: function () {
+                        alert('註冊錯誤');
+                    }
+                })
+            } else {
+                alert("先按")
+            }
+        })
+        
+        var fakeput = $('input');
+        fakeput.eq(0).click(()=>{fakeput.eq(0).val('pizzacat789');})
+        fakeput.eq(1).click(()=>{fakeput.eq(1).val('123456');})
+        fakeput.eq(2).click(()=>{fakeput.eq(2).val('林建容');})
+        fakeput.eq(3).click(()=>{fakeput.eq(3).val('pizzacat789@gmail.com');})
+        fakeput.eq(4).click(()=>{fakeput.eq(4).val('0979582471');})
+        fakeput.eq(5).click(()=>{fakeput.eq(5).val('花蓮縣花蓮市濟慈路27號');})
+        fakeput.eq(6).click(()=>{fakeput.eq(6).val('1990-05-26');})
+
+
+
+        //序列化轉JSON
+        function serializeToJSON(toArray) {
+            var vtoString = {};
+            for (index in toArray) {
+                vtoString[toArray[index].name] = toArray[index].value;
+                console.log(vtoString[toArray[index].name]);
+            }
+            return JSON.stringify(vtoString)
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

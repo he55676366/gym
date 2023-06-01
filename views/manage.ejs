@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理頁面</title>
+    <!-- 在router第二層引用要兩層 -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    </link>
+    <script src="../../js/jQuery-3.6.3.min.js"></script>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* 讓表格邊框合併 */
+            border: 1px solid black; /* 設定表格邊框樣式 */
+        }
+
+        table tr {
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid black; /* 設定單元格邊框樣式 */
+        }
+        td{
+            padding: 5px;
+            max-width: 650px;
+            height: 50px; /* 設定固定高度 */
+            overflow: hidden; /* 隱藏溢出部分 */
+            white-space: nowrap;
+            text-overflow: ellipsis; /* 超出部分顯示省略號 */
+        }
+        .white-bar{
+            background-color: #FDFFED;
+        }
+        h3{
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- 判斷參數 -->
+    <div id="rendername" class="d-none"><%= name %></div>
+    <div id="renderdata" class="d-none"><%- JSON.stringify(data) %></div>
+    <div id="rendercurr" class="d-none"><%- JSON.stringify(curr_page) %></div>
+    <div id="renderlast" class="d-none"><%- JSON.stringify(last_page) %></div>
+    <div id="rendertotal" class="d-none"><%- JSON.stringify(total_nums) %></div>
+    <div id="renderadd1" class="d-none"><%- JSON.stringify(add1) %></div>
+    <div id="renderadd2" class="d-none"><%- JSON.stringify(add2) %></div>
+
+    <div class="text-center p-3 " style="background-color:#EC9059">
+        <h1 class="fw-bold">管理頁面</h1>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 white-bar">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white ">
+                    <a href="/index"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">使用者頁面</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start fw-bold"
+                        id="menu">
+                        <li>
+                            <a href="/manage/member/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">會員資訊</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/coach/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">教練資訊</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/classinfo/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">課程資訊</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/equip/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">設備資訊</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/space/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">空間資訊</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/news/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">最新消息</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/products/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">產品資訊</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/purchaselist/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">購物紀錄</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/teamClass/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">團體課程列表</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/personalClass/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">個人課程預約</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/teamClassReserve/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">團體課程預約</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/spaceReserve/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">空間預約狀態</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/purchaseHistory/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">產品出售紀錄</span></a>
+                        </li>
+                        <li>
+                            <a href="/manage/enterTime/1" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">進出紀錄</span></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col py-3">
+                <div id="main"></div>
+
+                <!-- 編輯系列 -->
+
+                <dialog id="dialog${change}">
+                    <form method="POST">
+                        <input type="hidden" name="id">
+                        會員名稱: <input type="text" name="name"><br>
+                        課程名稱: <input type="text" name="csname"><br>
+                        <button type="submit" class="submit">新增</button>
+                        <button type="button" class="close">關閉</button>
+                    </form>
+                </dialog>
+
+                <dialog id="add${change}">
+                    <form method="POST">
+                        <input type="hidden" name="id">
+                        會員名稱: <input type="text" name="name"><br>
+                        課程名稱: <input type="text" name="csname"><br>
+                        <button type="submit" class="submitAdd">新增</button>
+                        <button type="button" class="close">關閉</button>
+                    </form>
+                </dialog>
+
+                <!-- 上傳圖片系列 -->
+                <dialog id="imgmember" class="imgchange"></dialog>
+
+                <dialog id="imgnews" class="imgchange"></dialog>
+
+                <dialog id="imgcoach" class="imgchange"></dialog>
+
+                <dialog id="imgspace" class="imgchange"></dialog>
+
+            </div>
+        </div>
+</body>
+
+<script>
+    var change = rendername.innerHTML;
+    var data = JSON.parse(renderdata.innerHTML);
+    var curr = JSON.parse(rendercurr.innerHTML);
+    var last = renderlast.innerHTML;
+    var nums = rendertotal.innerHTML;
+    var add1 = JSON.parse(renderadd1.innerHTML);
+    var add2 = JSON.parse(renderadd2.innerHTML);
+    console.log(add1);
+    console.log(add2);
+</script>
+
+<script src="../../js/appendmanage.js"></script>
+<script>
+    $(document).ready(function () {
+        var fileInput = $("input[type='file']");
+        fileInput.each(function (i) {
+            var submitBtn = $("button.subimg").eq(i);
+            fileInput.eq(i).change(function () {
+                if (!fileInput.eq(i).val()) {
+                    submitBtn.prop("disabled", true);
+                } else {
+                    submitBtn.prop("disabled", false);
+                }
+            });
+        });
+    });
+
+    $('.imgchange').append(`<img src="#" alt="出不來">
+                    <form action="#"  method="post" enctype="multipart/form-data">
+                        <input type="file" name="myfile" accept="image/*">
+                        <button type="submit" class="subimg" disabled>上傳檔案</button>
+                        <br>
+                        <div class="text-end"><button type="button" class="close text-right">關閉</button></div>
+                    </form>`);
+
+
+
+    function edit(x) {
+        // console.log(x);
+        $(`#dialog${change}`).get(0).showModal();
+        $(`#dialog${change} input`).each(function (i) {
+            var tt = $(`table tr.list${x} td`).eq(i).text();
+            // console.log(tt);
+            $(this).val(tt);
+        }); //.each省略.eq()
+        //讓表單中的名稱傳送到select 達到一致
+        var diaSelect = $(`#dialog${change} select`);
+        console.log(diaSelect.eq(0).val());
+        if (diaSelect.eq(0).val()) {
+            $.each(diaSelect, function (i, v) {
+                var formdata = $(v).prev().val(); // 找input中的數值
+                $(v).val(formdata); // 上傳到select選擇
+            });
+        }
+        var diaTextarea = $(`#dialog${change} textarea`);
+        $.each(diaTextarea, function (i, v) {
+            var formdata = $(v).prev().prev().val();
+            console.log($(v).prev().prev());
+            $(v).val(formdata);
+            console.log($(v).val())
+        })
+        //給ID
+        $(`#dialog${change} input[name="id"]`).val(x);
+    }
+
+    function add(x) {
+        $(`#add${change}`).get(0).showModal();
+        var latest = Object.values(data[data.length - 1])[0] + 1;
+        console.log(latest);
+        $(`#add${change} form`).attr('action', `/admin_upload/${change}/${latest}`);
+
+    }
+
+    function imgUpload(x) {
+        $(`#img${change}`).get(0).showModal();
+        var IMG = $(`.list${x} td button.img`).prev().text();
+        $(`#img${change} img`).attr('src', IMG);
+        $(`#img${change} form`).attr('action', `/admin_upload/${change}/${x}`);
+    }
+
+    $(".close").click(function () {
+        if ($(`#dialog${change}`).get(0)) {
+            $(`#dialog${change}`).get(0).close();
+        }
+        if ($(`#add${change}`).get(0)) {
+            $(`#add${change}`).get(0).close();
+        }
+        if ($(`#img${change}`).get(0)) {
+            $(`#img${change}`).get(0).close();
+        }
+    })
+
+    function Delete(id) {
+        var JSONData = { "id": id }
+        JSONData = JSON.stringify(JSONData)
+        $.ajax({
+            url: "/delete",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            data: JSONData,
+            success: function (res) {
+                var res = JSON.parse(res)
+                if (res.errno === 1) {
+                    alert("刪除成功!")
+                    location.reload()
+                } else if (res.errno === 0) {
+                    alert("刪除失敗!")
+                }
+            },
+            error: function () {
+                alert("系統錯誤!")
+            }
+        })
+    }
+    //jquery用 checkvalidity
+    $.fn.isValid = function () {
+        return this[0].checkValidity()
+    }
+
+
+
+    $('.submit').click(function () {
+        var x = $(`.submit`).index(this);
+        // console.log(x);
+        //確認表單內資料是否正確
+        if ($(`#dialog${change} form`).isValid()) {
+            //整理表單資料到變數
+            var data = $(`#dialog${change} form`).serializeArray();
+            JSONData = serializeToJSON(data);
+            console.log(JSONData);
+
+            $.ajax({
+                url: `/manage/${change}/update`,
+                type: "PUT",
+                contentType: "application/json; charset=utf-8",
+                data: JSONData,
+                success: function (res) {
+                    var res = JSON.parse(res)
+                    console.log(res);
+                    if (res.errno === 1) {
+                        location.reload()
+                    } else if (res.errno === 0) {
+                        alert("更新失敗!")
+                    }
+                },
+                error: function () {
+                    alert("更新系統錯誤!")
+                }
+            })
+        }
+    })
+    $('.submitAdd').click(function () {
+        var x = $(`.submitAdd`).index(this);
+        console.log(x + "123");
+        //確認表單內資料是否正確
+        if ($(`#add${change} form`).isValid()) {
+            //整理表單資料到變數
+            var data = $(`#add${change} form`).serializeArray();
+            JSONData = serializeToJSON(data);
+            console.log(JSONData);
+
+            $.ajax({
+                url: `/manage/${change}/add`,
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                data: JSONData,
+                success: function (res) {
+                    var res = JSON.parse(res)
+                    console.log(res);
+                    if (res.errno === 1) {
+                        location.reload()
+                    } else if (res.errno === 0) {
+                        alert("新增失敗!");
+                        location.reload()
+                    }
+                },
+                error: function () {
+                    alert("新增系統錯誤!");
+                    location.reload();
+                }
+            })
+        }
+    })
+
+    //序列化轉JSON
+    function serializeToJSON(toArray) {
+        var vtoString = {};
+        for (index in toArray) {
+            vtoString[toArray[index].name] = toArray[index].value;
+        }
+        return JSON.stringify(vtoString)
+    }
+
+    var fakeput = $('#addnews input');
+        fakeput.eq(1).click(()=>{fakeput.eq(1).val('上班族常見狀況有這些！');})
+    var fakearea = $('#addnews textarea');
+        fakearea.eq(0).click(()=>{fakearea.eq(0).val('上班族敏感問題，可能是體質惹的禍！很多人其實都有體質問題，經常忍耐並不是解決之道。如果老是忽略可能會導致身體狀態不佳、精神不濟，進而影響工作和生活品質。除了注意飲食、運動和睡眠等基本因素外，補充益生菌也是調整體質的有效方法。當體內的壞菌多於好菌時，我們會特別容易受到外在環境變化的影響，所以持續補充好菌、幫助維持好菌平衡是很重要的。');})
+
+</script>
+
+</html>

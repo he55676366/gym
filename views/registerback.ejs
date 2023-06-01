@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊頁面</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <h2>這是一個註冊畫面</h2>
+    <form id="reg">
+        <label>帳號：</label>
+        <input type="text" name="abc"  required><br><br>
+        <label>密碼：</label>
+        <input type="password" name="password" required><br><br>
+        <label>姓名：</label>
+        <input type="text" name="userName"><br><br>
+        <label>電話：</label>
+        <input type="text" name="phone"><br><br>
+        <label>E-mail：</label>
+        <input type="text" name="email"><br><br>
+        <label>生日：</label>
+        <input type="date" name="birth"><br><br>
+        <label>地址：</label>
+        <input type="text" name="adress"><br><br>
+
+        <button type="button" id="fine">註冊</button>
+    </form>
+<script>
+    $('#fine').click(function(){
+        var toArray = $('#reg').serializeArray();
+        jsonArray = serializeToJSON(toArray);
+        console.log(jsonArray);
+        $.ajax({
+            url: "/add",
+            type: "POST",
+            contentType:"application/json; charset=utf-8",
+            data:jsonArray,
+            success:function(res){
+                var res = JSON.parse(res);
+                if(res.errno === 1){
+                    alert('註冊成功');
+                    location.href = '/'
+                } else if(res.errno === 0) {
+                    alert('註冊失敗');
+                }
+            },
+            error: function(){
+                alert('註冊錯誤');
+            }
+        })
+    })
+        //序列化轉JSON
+        function serializeToJSON(toArray) {
+            var vtoString = {};
+            for(index in toArray){
+                vtoString[toArray[index].name] = toArray[index].value;
+                console.log(vtoString[toArray[index].name]);
+            }
+            
+            return JSON.stringify(vtoString)
+        }
+
+
+
+
+</script>
+</body>
+</html>
