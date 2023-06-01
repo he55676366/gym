@@ -1,0 +1,159 @@
+html {
+    scroll-behavior: smooth;
+    }
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;   
+    font-family: "Taipei Sans";
+    } 
+
+
+.headline{
+    color:#b15bff ;
+    border-bottom: 2px solid  #ec9059;
+    font-size: medium;
+  }
+  table{   
+    width: 100%; 
+    background-color: white;   
+  }
+  .schedule {
+     border-collapse: separate;
+    border-spacing: 10;
+    /* border-radius: 8px; */
+  }
+  td,
+  tr,
+  th{
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #e7b396bc;
+    background-color: white;    
+    
+  }
+  
+th{
+line-height: 50px;
+}
+td{
+line-height: 35px;
+}
+
+
+
+  /* 輪播 */
+.carousel {
+margin-bottom: 4rem;
+}
+.carousel-caption {
+bottom: 40px;
+left: 590px;
+width: 45%;
+/* z-index: 1; */
+}
+.carousel-item {
+height: 400px;  
+}
+
+@media (min-width: 40em) {
+.carousel-caption p {
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}  
+}
+ 
+select{
+  appearance: none;
+  display: block;
+  border-radius: 10px;
+  padding: 5px 5px 5px 5px;
+  background: url(../img/coach/add_logo.png) no-repeat 95% center;
+  color: gray;
+  border: 2px solid #ec9059;
+  width: 150px;   
+  margin-right: 5px; 
+  background-color: white;
+  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  option{
+    color: black;
+  }
+
+.d-flex .btn:first-child{
+position: absolute;
+left: 15px;
+top: 630px;
+
+}
+.d-flex .btn:last-child{
+position: absolute;
+right: 15px;
+top: 630px;  
+
+}
+
+/* 師資 */
+.flip-card {   
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;   
+}  
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+.title{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+}  
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}  
+.flip-card-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+.front_name{
+  position: fixed;
+  bottom: 26px;
+  left: 10px;
+  float: right;
+}
+.front_section{
+  position: fixed;
+  bottom: 0px;
+  float: right;
+  font-family: "Taipei Sans";
+  left: 10px;
+} 
+/* 設備 */
+.equip-photo{
+  position: absolute;
+  top: 0px;
+  float: right;    
+  }
+  

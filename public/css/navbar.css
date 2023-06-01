@@ -1,0 +1,180 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 12px;
+  background-color: rgba(0, 0, 0, .1); 
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 類別選單 */
+.filter{
+  color:#EC9059 ;
+  list-style-type: none;
+}
+.filter:hover{
+  color:#b15bff ;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+
+/* 輪播 */
+.carousel {
+  margin-bottom: 4rem;
+}
+.carousel-caption {
+  /* position: relative; */
+  /* right: 0px; */
+  bottom: 10px;
+  /* z-index: 999; */
+}
+.carousel-item {
+  height: 300px;  
+}
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }  
+}
+/* footer */
+.footer-link, .footer-icon{
+  color:gray;
+  text-decoration: none;
+}
+.footer-link:hover{
+  text-decoration: underline;
+  color:#EC9059;
+}
+.footer-icon:hover{
+  color: #EC9059;
+}
+footer{
+  background-color: white;
+  height: 150px;
+}
+
+/* 最新消息*/
+.filterDiv { 
+  display: none;
+}
+.show {
+  display: block;
+}
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+/* navbar V2 */
+body {  
+  margin-top: 40px;
+  padding-top: 4.5rem;
+  background-color: #003b64;
+  font-family: "Taipei Sans";
+}
+.navbarA a {
+  font-size: 16px;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.dropdownA {
+  float: left;
+  overflow: hidden; 
+}
+.dropdownA .dropbtnA {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.navbarA a:hover, 
+.dropdownA button:hover{
+  color: #fdb68c;
+  border-bottom: 2px solid #ff4461;
+}
+.dropdown-contentA {
+  display: none;
+  position: absolute;
+  background-color:  #88abc5;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.navbarA span{
+  float: none;
+  color:#fdb68c;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+.dropdown-contentA a{
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdownA:hover .dropdown-contentA {
+  display: block;
+}
+nav{
+  background-color:  #003b64;
+}
+.icon{
+  color: #003b64;  
+}
+.dark{
+  background-color:rgb(253, 255, 228);
+}
